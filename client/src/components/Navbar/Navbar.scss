@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.navBar {
+  display: flex;
+  background-color: #303230;
+  justify-content: space-between;
+  color: #efefef;
+}
+
+.title_navbar {
+  position: absolute;
+  margin-left: 1em;
+  font-size: 2em;
+  margin-top: 0.6em;
+  font-weight: 700;
+}
+
+.logo_titre_navbar {
+  position: relative;
+}
+.player_nav {
+  margin-left: 2em;
+}
+
+.anchor_filter_navbar {
+  margin-top: 8.5em;
+  padding-bottom: 0.5em;
+}
+
+.anchor_navbar ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  align-items: flex-start;
+  padding-left: 0;
+  font-weight: 700;
+}
+.filter_navbar {
+  padding-left: 0.5em;
+}
+
+.searchnavbar {
+  border-radius: 5em;
+  width: 24em;
+}
+.image_navbar_logo {
+  width: 50%;
+  display: block;
+  margin-left: 2em;
+  margin-top: 1em;
+}
+
+.image_navbar_profil {
+  width: 15%;
+  height: 20%;
+  margin-right: 1.8em;
+  margin-top: 0.5em;
+}
+
+.anchor_navbar ul li {
+  margin-left: 0.5em;
+  margin-top: 0.5em;
+}
+
+.logo_profil_navbar {
+  display: flex;
+  margin-left: 2.5em;
+  flex-direction: column;
+  align-items: end;
+}
+.profil {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-right: 1.5em;
+}
+.profil_navbar {
+  margin-right: 2.4em;
+}
+.image_navbar {
+  width: 150%;
+}
+
+@media screen and (max-width: 360px) {
+  .logo_profil_navbar {
+    position: absolute;
+    display: flex;
+    align-items: end;
+  }
+  .profil_navbar {
+    font-size: 0.8em;
+  }
+  .image_navbar_logo {
+    height: 50%;
+    width: 50%;
+  }
+
+  .image_navbar {
+    width: 100%;
+  }
+}
