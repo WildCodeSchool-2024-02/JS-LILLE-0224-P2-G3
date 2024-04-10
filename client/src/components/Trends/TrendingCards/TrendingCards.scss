@@ -1,0 +1,47 @@
+//    BIG CARD
+#first_card_details {
+  width: 80%;
+  height: auto;
+  padding-top: 2%;
+  border-radius: 10%;
+}
+.card_details_container {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(80, 80, 80);
+  border-radius: 10%;
+}
+.card_details_info {
+  text-align: center;
+  margin-right: 7%;
+  margin-left: 7%;
+}
+h3 {
+  font-size: 1.5em;
+}
+
+//    CARDS DISPOSITION
+.parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+.div1 {
+  grid-area: 1 / 1 / 3 / 2;
+}
+.div2 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.div3 {
+  grid-area: 1 / 3 / 2 / 4;
+}
+.div4 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+.div5 {
+  grid-area: 2 / 3 / 3 / 4;
+}
