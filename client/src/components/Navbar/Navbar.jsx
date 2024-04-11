@@ -1,4 +1,4 @@
-import logoTitle from "../../assets/images/Logonavbar.png";
+import logoTitle from "../../assets/images/logonavbar.png";
 import logoProfil from "../../assets/images/logoprofil.png";
 import imgNavbar from "../../assets/images/imgnavbar.png";
 import "./Navbar.scss";
@@ -8,11 +8,6 @@ function Navbar() {
     <div className="navbartop">
       <div className="navBar">
         <div className="logo_titre_navbar">
-          <div className="title_navbar">
-            <p>READY</p>
-            <p className="player_nav">PLAYER</p>
-            <p>FOUND</p>
-          </div>
           <div className="imglogo_navbar">
             <img className="image_navbar_logo" src={logoTitle} alt="logo" />
           </div>
