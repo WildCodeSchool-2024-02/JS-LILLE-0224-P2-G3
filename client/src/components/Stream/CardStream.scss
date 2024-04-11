@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 //      CARD DECORATION
 .cards_stream_image {
   width: 80%;
@@ -11,12 +17,12 @@
   align-items: center;
   background-color: rgb(80, 80, 80);
   border-radius: 10%;
-  margin: 1em;
   height: 100%;
 }
 .card_stream {
   width: 25%;
   margin: 1em;
+  font-size: 1.2em;
 }
 .card_stream_container:hover {
   cursor: pointer;
@@ -36,4 +42,21 @@ h4 {
 //    CARDS DISPLAY
 .streamer_list {
   display: flex;
+}
+
+//    RESPONSIVE : MOBILE VERSION
+
+@media screen and (max-width: 990px) {
+  //   DISPOSITION DES CARDS
+  .streamer_list {
+    display: flex;
+    flex-direction: column;
+  }
+  .card_stream {
+    width: 90%;
+  }
+  .card_stream_container {
+    margin-bottom: 0.2em;
+    padding-bottom: 1em;
+  }
 }
