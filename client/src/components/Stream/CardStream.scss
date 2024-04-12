@@ -9,13 +9,14 @@
   width: 80%;
   padding-top: 3%;
   border-radius: 1.5em;
+  cursor: pointer;
 }
 .card_stream_container {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(80, 80, 80);
+  background-color: #303230;
   border-radius: 10%;
   height: 100%;
 }
@@ -24,9 +25,7 @@
   margin: 1em;
   font-size: 1.2em;
 }
-.card_stream_container:hover {
-  cursor: pointer;
-}
+
 .card_stream_info {
   text-align: center;
   margin-right: 7%;
@@ -44,6 +43,15 @@ h4 {
   display: flex;
 }
 
+.player-wrapper {
+  width: 80%;
+}
+
+//    BUTTON : HIDDEN
+button {
+  display: none;
+}
+
 //    RESPONSIVE : MOBILE VERSION
 
 @media screen and (max-width: 990px) {
@@ -58,5 +66,14 @@ h4 {
   .card_stream_container {
     margin-bottom: 0.2em;
     padding-bottom: 1em;
+  }
+
+  //    BUTTON + DISPLAY NONE CARDS
+  button {
+    display: block;
+  }
+  .card3,
+  .card4 {
+    display: none;
   }
 }

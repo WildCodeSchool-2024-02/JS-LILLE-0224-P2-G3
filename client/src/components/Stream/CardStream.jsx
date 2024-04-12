@@ -3,7 +3,7 @@ import "./CardStream.scss";
 
 function CardStream({ stream }) {
   return (
-    <div className="card_stream">
+    <div className={`${stream.class} card_stream`}>
       <div className="card_stream_container">
         <img
           className="cards_stream_image"
@@ -24,6 +24,8 @@ CardStream.propTypes = {
     name: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
+    video: PropTypes.string.isRequired,
+    class: PropTypes.string.isRequired,
   }).isRequired,
 };
 
