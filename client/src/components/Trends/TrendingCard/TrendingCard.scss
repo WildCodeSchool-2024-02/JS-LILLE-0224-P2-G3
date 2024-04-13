@@ -3,10 +3,11 @@ body {
 }
 
 h2 {
-  font-size: 3em;
+  font-size: 4em;
   margin-left: 1em;
   margin-top: 1em;
   color: #477a7d;
+  font-family: "Oswald", sans-serif;
 }
 
 //    FOR ALL THE CARDS
@@ -21,12 +22,32 @@ h2 {
   cursor: pointer;
 }
 
+.trending_card_info {
+  text-align: center;
+  // padding-top: 5%;
+}
+
 h3 {
   font-size: 1.5em;
-  padding-top: 0.3em;
+  padding-top: 2%;
+  padding-bottom: 1%;
+  font-family: "Oswald", sans-serif;
+  margin: 0;
+}
+
+p {
+  font-family: Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: 100;
 }
 
 //    FOR ALL THE CARDS: IMAGE
+
+.trending_container_image {
+  display: flex;
+  justify-content: center;
+}
+
 .trending_card_image {
   width: 90%;
   border-radius: 1em;
@@ -39,7 +60,7 @@ h3 {
   flex-direction: column;
 }
 .trending_card_container {
-  width: 90%;
+  // width: 90%;
   margin-bottom: 0.2em;
   padding-bottom: 1em;
 }
@@ -72,11 +93,14 @@ h3 {
     box-sizing: content-box;
     color: white;
     cursor: pointer;
-    width: 30%;
+    width: 100%;
   }
+
   .focus_card {
-    display: block;
+    display: flex;
+    justify-content: center;
   }
+
   .focus_card_mobile {
     display: none;
   }
@@ -88,5 +112,10 @@ h3 {
   //    HIDE TEXT CARDS 2 / 3 / 4 / 5
   .otherCards p {
     display: none;
+  }
+
+  p {
+    margin-left: 5%;
+    margin-right: 5%;
   }
 }

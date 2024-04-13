@@ -11,7 +11,12 @@ function TrendingCard({ tendances, focusCard, setFocusCard }) {
 
   return (
     <div className={`${tendances.class} trending_card_container`}>
-      <div role="presentation" onClick={handleChange} onKeyDown={handleChange}>
+      <div
+        role="presentation"
+        className="trending_container_image"
+        onClick={handleChange}
+        onKeyDown={handleChange}
+      >
         <img
           className="trending_card_image"
           src={tendances.image}
