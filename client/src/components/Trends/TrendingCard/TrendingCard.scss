@@ -1,0 +1,71 @@
+body {
+  background-color: #eeeeee;
+}
+
+h2 {
+  font-size: 3em;
+  margin-left: 1em;
+  margin-top: 1em;
+  color: #477a7d;
+}
+
+//    FOR ALL THE CARDS
+.trending_card_container {
+  background-color: #303230;
+  margin-left: 1em;
+  border-radius: 2em;
+  padding: 1em;
+  margin: 1em;
+  box-sizing: content-box;
+  color: white;
+  cursor: pointer;
+}
+
+h3 {
+  font-size: 1.5em;
+  padding-top: 0.3em;
+}
+
+//    FOR ALL THE CARDS: IMAGE
+.trending_card_image {
+  width: 90%;
+  border-radius: 1em;
+  justify-content: center;
+}
+
+//   DISPOSITION DES CARDS
+.all_cards {
+  display: flex;
+  flex-direction: column;
+}
+.trending_card_container {
+  width: 90%;
+  margin-bottom: 0.2em;
+  padding-bottom: 1em;
+}
+
+//    RESPONSIVE : DESKTOP VERSION
+
+@media screen and (min-width: 990px) {
+  //    FOR ALL THE CARDS
+  .trending_card_container {
+    background-color: #303230;
+    margin-left: 1em;
+    border-radius: 2em;
+    padding: 1em;
+    margin: 1em;
+    box-sizing: content-box;
+    color: white;
+    cursor: pointer;
+    width: 30%;
+  }
+
+  //    CARDS DISPOSITION : FLEX
+  .otherCards {
+    display: flex;
+  }
+  //    HIDE TEXT CARDS 2 / 3 / 4 / 5
+  .otherCards p {
+    display: none;
+  }
+}

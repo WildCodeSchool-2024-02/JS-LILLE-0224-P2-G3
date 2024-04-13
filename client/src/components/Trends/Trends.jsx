@@ -1,11 +1,12 @@
-import TrendingCards from "./TrendingCards/TrendingCards";
+import { useState, useEffect } from "react";
+import TrendingCard from "./TrendingCard/TrendingCard";
 
 function Trends() {
   const trendsList = [
     {
       image: "/public/trends/starwars.jpeg",
       title: "Sortie de Star Wars Outlaws",
-      info: "Une fuite en provenance du Japon nous a permis d’apprendre que le jeu d’Ubisoft Massive sortirait cet été, mais il nous restait encore à découvrir la bande-annonce en elle-même, centrée sur l’histoire inédite que le jeu va nous raconter.",
+      info: "Une fuite en provenance du Japon nous a permis d’apprendre que le jeu d’Ubisoft Massive sortirait cet été, mais il nous restait encore à découvrir la bande-annonce en elle-même, centrée sur l’histoire inédite que le jeu va nous raconter. On ne sera pas surpris par la date mentionnée par ce trailer, mais la vidéo avait de toute façon plein d’autres choses à nous montrer. Star Wars Outlaws prend ici des allures d’Uncharted avec cette grande aventure mouvementée dans laquelle Kay Vess va faire face à de multiples épreuves, notamment en se frottant à un syndicat du crime qu’il ne fallait pas énerver : le Zerek Besh et son chef Sliro qui vont pourchasser notre héroïne. C’est pour cela que Kay devra s’allier malgré elle à d’autre organisations criminelles comme le syndicat Pike ou le cartel Hutt pour échapper à son ennemi principal.",
       link: "https://www.actugaming.net/star-wars-outlaws-tout-savoir-634719/",
       class: "div1",
     },
@@ -25,7 +26,7 @@ function Trends() {
     },
     {
       image: "/public/trends/activision.jpeg",
-      title: "Rachat d'Activision Blizzard par Microsoft",
+      title: "Rachat d'Activision Blizzard",
       info: "L’autorité de régulation britannique a finalement donné son accord au rachat de l’éditeur de jeux vidéo américain Activision Blizzard par le géant Microsoft. Près de deux ans après son annonce, l’opération record à 68,7 milliards aboutit",
       link: "https://www.letemps.ch/economie/le-dernier-obstacle-au-rachat-d-activision-blizzard-par-microsoft-est-leve",
       class: "div4",
@@ -39,12 +40,35 @@ function Trends() {
     },
   ];
 
+  const [focusCard, setFocusCard] = useState(trendsList[0]);
+  const [othersTrends, setOthersTrends] = useState(
+    trendsList.filter((trend) => trend.title !== focusCard.title)
+  );
+
+  useEffect(() => {
+    const updatedTrendsArray = trendsList.filter(
+      (trend) => trend.title !== focusCard.title
+    );
+    setOthersTrends(updatedTrendsArray);
+  }, [focusCard]);
+
   return (
-    <div className="grid_container">
-      {trendsList.map((tendance) => (
-        <TrendingCards tendances={tendance} key={trendsList.name} />
-      ))}
-    </div>
+    <>
+      <h2>TENDANCES</h2>
+      <div className="all_cards">
+        <TrendingCard tendances={focusCard} className="focusedCard" />
+        <div className="otherCards">
+          {othersTrends.map((trend) => (
+            <TrendingCard
+              tendances={trend}
+              focusCard={focusCard}
+              setFocusCard={setFocusCard}
+              key={trendsList.name}
+            />
+          ))}
+        </div>
+      </div>
+    </>
   );
 }
 
