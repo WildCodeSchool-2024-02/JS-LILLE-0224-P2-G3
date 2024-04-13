@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import "./TrendingCard.scss";
 
 function TrendingCard({ tendances, focusCard, setFocusCard }) {
-  //      DISPOSITION CHANGE : CARD CLICKED GO TO FOCUS
+  //      DISPOSITION DESKTOP // CHANGE : CARD CLICKED GO TO FOCUS
   const handleChange = () => {
     if (!focusCard.title.includes(tendances.title)) {
       setFocusCard(tendances);
