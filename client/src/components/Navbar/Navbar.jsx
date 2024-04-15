@@ -1,6 +1,5 @@
 import logoTitle from "../../assets/images/logonavbar.png";
 import logoProfil from "../../assets/images/logoprofil.png";
-import imgNavbar from "../../assets/images/imgnavbar.png";
 import "./Navbar.scss";
 
 function Navbar() {
@@ -35,9 +34,6 @@ function Navbar() {
             <p>Profil</p>
           </div>
         </div>
-      </div>
-      <div className="image_navbar_separator">
-        <img className="image_navbar" src={imgNavbar} alt="imageNavbar" />
       </div>
     </div>
   );
