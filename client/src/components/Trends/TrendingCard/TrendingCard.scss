@@ -51,7 +51,6 @@ p {
 .trending_card_image {
   width: 90%;
   border-radius: 1em;
-  justify-content: center;
 }
 
 //   DISPOSITION DES CARDS
@@ -93,12 +92,15 @@ p {
     box-sizing: content-box;
     color: white;
     cursor: pointer;
-    width: 100%;
   }
 
   .focus_card {
     display: flex;
     justify-content: center;
+    width: 60%;
+  }
+  .focus_card_container {
+    width: 100%;
   }
 
   .focus_card_mobile {
@@ -106,14 +108,32 @@ p {
   }
   //    CARDS DISPOSITION : FLEX
 
+  .all_cards {
+    display: flex;
+    flex-direction: row;
+  }
   .otherCards {
     display: flex;
+    width: 60%;
+    flex-wrap: wrap;
   }
+  .otherCards {
+    .trending_card_container {
+      width: 20vw;
+      height: 35vh;
+    }
+  }
+  .focus_card {
+    .trending_card_container {
+      width: 45vw;
+      height: 85vh;
+    }
+  }
+
   //    HIDE TEXT CARDS 2 / 3 / 4 / 5
   .otherCards p {
     display: none;
   }
-
   p {
     margin-left: 5%;
     margin-right: 5%;
