@@ -50,7 +50,7 @@ function Trends() {
       (trend) => trend.title !== focusCard.title
     );
     setOthersTrends(updatedTrendsArray);
-  }, [focusCard, trendsList]);
+  }, [focusCard]);
 
   //    DISPOSITION MOBILE
   const [cardIndex, setCardIndex] = useState(0);
@@ -68,6 +68,17 @@ function Trends() {
         <div className="focus_card">
           <TrendingCard tendances={focusCard} />
         </div>
+        <div className="buttons">
+          {cardIndex > 0 && (
+            <button
+              className="button_previous"
+              type="button"
+              onClick={buttonPrevious}
+            >
+              &lt;
+            </button>
+          )}
+        </div>
         <div className="focus_card_mobile">
           <TrendingCard tendances={trendsList[cardIndex]} id="focus_mobile " />
         </div>
@@ -82,18 +93,13 @@ function Trends() {
             />
           ))}
         </div>
-      </div>
-      <div className="buttons">
-        {cardIndex > 0 && (
-          <button type="button" onClick={buttonPrevious}>
-            Previous
-          </button>
-        )}
-        {cardIndex < trendsList.length - 1 && (
-          <button type="button" onClick={buttonNext}>
-            Next
-          </button>
-        )}
+        <div className="buttons">
+          {cardIndex < trendsList.length - 1 && (
+            <button className="button_next" type="button" onClick={buttonNext}>
+              &gt;
+            </button>
+          )}
+        </div>
       </div>
     </>
   );
