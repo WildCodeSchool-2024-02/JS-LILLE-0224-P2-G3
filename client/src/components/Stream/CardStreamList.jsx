@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./CardStream.scss";
 import CardStream from "./CardStream";
 
@@ -33,18 +34,52 @@ function CardStreamList() {
       class: "card4",
     },
   ];
+  const [showAllCards, setShowAllCards] = useState();
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth <= 650) {
+      setShowAllCards(false);
+    } else {
+      setShowAllCards(true);
+    }
+  });
 
   return (
     <>
       <div>
-        <h2>STREAM</h2>
+        {!showAllCards && (
+          <div>
+            <div>
+              <h2>STREAM</h2>
+            </div>
+            <div className="streamer_list">
+              {streamerList.slice(0, 2).map((streamer) => (
+                <CardStream stream={streamer} key={streamer.name} />
+              ))}
+            </div>
+            <div className="button">
+              <button type="button" onClick={() => setShowAllCards(true)}>
+                Voir plus
+              </button>
+            </div>
+          </div>
+        )}
       </div>
-      <div className="streamer_list">
-        {streamerList.map((streamer) => (
-          <CardStream stream={streamer} key={streamer.name} />
-        ))}
+
+      <div>
+        {showAllCards && (
+          <div>
+            <div>
+              <h2>STREAM</h2>
+            </div>
+            <div className="streamer_list">
+              {streamerList.map((streamer) => (
+                <CardStream stream={streamer} key={streamer.name} />
+              ))}
+            </div>
+          </div>
+        )}
       </div>
-      <button type="button">Voir plus</button>
     </>
   );
 }

@@ -47,11 +47,6 @@ h4 {
   width: 80%;
 }
 
-//    BUTTON : HIDDEN
-button {
-  display: none;
-}
-
 //    RESPONSIVE : MOBILE VERSION
 
 @media screen and (max-width: 990px) {
@@ -68,12 +63,11 @@ button {
     padding-bottom: 1em;
   }
 
-  //    BUTTON + DISPLAY NONE CARDS
-  button {
-    display: block;
-  }
-  .card3,
-  .card4 {
-    display: none;
+  //    BUTTON
+  .button {
+    display: flex;
+    justify-content: center;
+    padding: 0.5em;
+    border-radius: 1em;
   }
 }
