@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+//      CARD DECORATION
+.cards_stream_image {
+  width: 80%;
+  padding-top: 3%;
+  border-radius: 1.5em;
+  cursor: pointer;
+}
+.card_stream_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #303230;
+  border-radius: 10%;
+  height: 100%;
+}
+.card_stream {
+  width: 25%;
+  margin: 1em;
+  font-size: 1.2em;
+}
+
+.card_stream_info {
+  text-align: center;
+  margin-right: 7%;
+  margin-left: 7%;
+  color: white;
+}
+h4 {
+  font-size: 1.5em;
+  color: white;
+  margin: 0.5em;
+}
+
+//    CARDS DISPLAY
+.streamer_list {
+  display: flex;
+}
+
+.player-wrapper {
+  width: 80%;
+}
+
+//    RESPONSIVE : MOBILE VERSION
+
+@media screen and (max-width: 990px) {
+  //   DISPOSITION DES CARDS
+  .streamer_list {
+    display: flex;
+    flex-direction: column;
+  }
+  .card_stream {
+    width: 90%;
+  }
+  .card_stream_container {
+    margin-bottom: 0.2em;
+    padding-bottom: 1em;
+  }
+
+  //    BUTTON
+  .button {
+    display: flex;
+    justify-content: center;
+    padding: 0.5em;
+    border-radius: 1em;
+  }
+}

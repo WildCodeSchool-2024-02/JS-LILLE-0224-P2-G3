@@ -1,0 +1,164 @@
+body {
+  background-color: #eeeeee;
+}
+
+h2 {
+  font-size: 4em;
+  margin-left: 1em;
+  margin-top: 1em;
+  color: #477a7d;
+  font-family: "Oswald", sans-serif;
+}
+
+//    FOR ALL THE CARDS
+.trending_card_container {
+  background-color: #303230;
+  margin-left: 1em;
+  border-radius: 2em;
+  padding: 1em;
+  margin: 1em;
+  box-sizing: content-box;
+  color: white;
+  cursor: pointer;
+}
+
+.trending_card_info {
+  text-align: center;
+  // padding-top: 5%;
+}
+
+h3 {
+  font-size: 1.5em;
+  padding-top: 2%;
+  padding-bottom: 1%;
+  font-family: "Oswald", sans-serif;
+  margin: 0;
+}
+
+p {
+  font-family: Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: 100;
+}
+
+//    FOR ALL THE CARDS: IMAGE
+
+.trending_container_image {
+  display: flex;
+  justify-content: center;
+}
+
+.trending_card_image {
+  margin-top: 5%;
+  margin-left: 5%;
+  width: 90%;
+  border-radius: 1em;
+}
+
+.trending_title {
+  text-align: center;
+}
+
+.trending_info {
+  text-align: center;
+}
+
+//   DISPOSITION DES CARDS
+.all_cards {
+  display: flex;
+  flex-direction: row;
+}
+.trending_card_container {
+  // width: 90%;
+  margin-bottom: 0.2em;
+  padding-bottom: 1em;
+}
+.otherCards {
+  display: none;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  font-weight: 800;
+}
+
+.button_next {
+  border-radius: 1.5em;
+  font-size: 1em;
+  height: 9%;
+  width: 3em;
+}
+
+.button_previous {
+  border-radius: 1.5em;
+  font-size: 1em;
+  height: 9%;
+  width: 3em;
+}
+
+//    HIDDEN CARD (MOBILE VERSION)
+.focus_card {
+  display: none;
+}
+
+//    RESPONSIVE : DESKTOP VERSION
+
+@media screen and (min-width: 990px) {
+  //    FOR ALL THE CARDS
+  .trending_card_container {
+    background-color: #303230;
+    margin-left: 1em;
+    border-radius: 2em;
+    padding: 1em;
+    margin: 1em;
+    box-sizing: content-box;
+    color: white;
+    cursor: pointer;
+  }
+
+  .focus_card {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+  }
+  .focus_card_container {
+    width: 100%;
+  }
+
+  .focus_card_mobile {
+    display: none;
+  }
+  //    CARDS DISPOSITION : FLEX
+
+  .all_cards {
+    display: flex;
+    flex-direction: row;
+  }
+  .otherCards {
+    display: flex;
+    width: 60%;
+    flex-wrap: wrap;
+  }
+  .otherCards {
+    .trending_card_container {
+      width: 20vw;
+      height: 35vh;
+    }
+  }
+  .focus_card {
+    .trending_card_container {
+      width: 45vw;
+      height: 85vh;
+    }
+  }
+
+  //    HIDE TEXT CARDS 2 / 3 / 4 / 5
+  .otherCards p {
+    display: none;
+  }
+  p {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
