@@ -21,8 +21,8 @@ function TrendingCard({ tendances, focusCard, setFocusCard }) {
           src={tendances.image}
           alt={tendances.title}
         />
-        <h3>{tendances.title}</h3>
-        <p>{tendances.info}</p>
+        <h3 className="trending_title">{tendances.title}</h3>
+        <p className="trending_info">{tendances.info}</p>
       </div>
     </div>
   );
