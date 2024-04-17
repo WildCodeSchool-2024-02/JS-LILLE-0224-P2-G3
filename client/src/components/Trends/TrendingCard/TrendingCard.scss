@@ -24,7 +24,6 @@ h2 {
 
 .trending_card_info {
   text-align: center;
-  // padding-top: 5%;
 }
 
 h3 {
@@ -151,6 +150,10 @@ p {
       width: 45vw;
       height: 85vh;
     }
+  }
+
+  .buttons {
+    display: none;
   }
 
   //    HIDE TEXT CARDS 2 / 3 / 4 / 5
