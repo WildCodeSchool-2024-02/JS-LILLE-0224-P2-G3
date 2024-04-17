@@ -22,17 +22,6 @@ function Categories() {
     getCategories();
   }, []);
 
-  //    GET THE GENDER WHEN YOU CLICK
-  // LIGNES DU DESSOUS COMMENTÉES POUR PUSH DE 21 À 39
-  // const [gamesByGenreId, setGamesByGenreId] = useState([]);
-
-  // const getGamesbyGenreId = (id) => {
-  //   Api.getGamesbyGenreId(id).then((resp) => {
-  //     setGamesByGenreId(resp.data.results);
-  //   });
-  // };
-
-
   return (
     <div>
       <h2> genre</h2>
