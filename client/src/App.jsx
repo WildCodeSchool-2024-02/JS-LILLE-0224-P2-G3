@@ -1,5 +1,6 @@
 import "./App.css";
 import Categories from "./components/Categories/Categories";
+import Search from "./components/Search/Search";
 
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
    
     <div>
       
+    <Search />
     <Categories/>
     </div>
     
