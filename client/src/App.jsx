@@ -1,18 +1,23 @@
 import "./App.css";
-import Navbar from "./components/Navbar/Navbar";
-import CardStreamList from "./components/Stream/CardStreamList";
-import Trends from "./components/Trends/Trends";
-import Categories from "./components/Categories/Categories";
-import Search from "./components/Search/Search";
+import { Outlet } from "react-router-dom";
+// import CardStreamList from "./components/Stream/CardStreamList";
+// import Trends from "./components/Trends/Trends";
+// import Categories from "./components/Categories/Categories";
+
+
+
 
 function App() {
   return (
     <>
-    <Navbar />
-      <Trends />
-      <CardStreamList />
+
     <Search />
-    <Categories/>
+      {/* <Trends />
+      <CardStreamList />
+    <Categories/> */}
+    <main>
+      <Outlet/>
+    </main>
     </>
   );
 }
