@@ -20,6 +20,7 @@ function Categories() {
 
   useEffect(() => {
     getCategories();
+    setShowAllCategs(window.innerWidth > 650);
   }, []);
 
   return (
