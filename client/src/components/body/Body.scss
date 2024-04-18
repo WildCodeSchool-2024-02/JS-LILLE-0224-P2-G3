@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.logopng {
+  width: 100%;
+}
+
+.nom_adress {
+  display: flex;
+  flex-direction: column;
+}
+
+.user_adress {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1em;
+}
+
+.logo_nom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  align-items: center;
+  margin-top: 2em;
+  margin-bottom: 3em;
+}
+
+.logo {
+  width: 20%;
+}
+
+.all_parametre {
+  border-top: 2px solid black;
+}
+.parametre {
+  margin-top: 2em;
+  text-align: center;
+}
+
+.onglet_parametre {
+  list-style-type: none;
+}
+
+.perso_profil {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 1em;
+  margin-top: 4em;
+}
+
+.perso_profil h3 {
+  background-color: rgb(116, 112, 112);
+  color: white;
+  border-radius: 0.5em;
+  width: 40%;
+  text-align: center;
+}
+
+.onglet_parametre li:hover {
+  color: red;
+}
+
+.adresse {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 1em;
+  margin-top: 4em;
+}
+
+.adresse h3 {
+  background-color: rgb(116, 112, 112);
+  color: white;
+  border-radius: 0.5em;
+  width: 40%;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.adresse_onglet {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.all_pseudo {
+  margin-top: 5em;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5em;
+}
+.pseudo {
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+.pseudo h3 {
+  margin-top: 3em;
+}
+
+.input_send {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.button_send {
+  margin-left: -6em;
+}
+.button {
+  color: white;
+  width: 5em;
+  border-radius: 0.5em;
+  background-color: rgb(172, 155, 155);
+}
+
+.button:hover {
+  color: red;
+}
+.avatar {
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+.all_avatar {
+  border-bottom: 2px solid black;
+}
+
+.input_send {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.putpseudo {
+  border-radius: 0.5em;
+}
+
+.putavatar {
+  border-radius: 0.5em;
+  margin-bottom: 5em;
+}
+
+.input_adress {
+  margin-top: 3em;
+  margin-bottom: 3em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.put_adress {
+  border-radius: 0.5em;
+}
