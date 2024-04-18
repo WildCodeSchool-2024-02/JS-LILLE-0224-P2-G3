@@ -18,7 +18,7 @@ function Trends() {
       class: "div2",
     },
     {
-      image: "/public/trends/zevent.jpeg",
+      image: "/public/trends/zevent-2022.jpeg",
       title: "Retour du Zevent",
       info: "Le Z Event est de retour. Après une interruption d’un an, l’évènement va revenir en 2024. C’est ce qu’a annoncé le 12 mars Adrien Nougaret, alias Zerator, à l’occasion de son passage dans Popcorn, l’émission organisée sur Twitch par Pierre-Alexis Bizot, alias Domingo. « Il y aura un Z Event cette année. On travaille dessus », a déclaré l’intéressé.",
       link: "https://www.numerama.com/politique/1651766-il-y-aura-un-z-event-le-marathon-caritatif-du-jeu-video-revient-apres-un-an-de-pause.html",
@@ -32,8 +32,8 @@ function Trends() {
       class: "div4",
     },
     {
-      image: "/public/trends/zlan.jpeg",
-      title: "Zlan 2024 : toutes les informations",
+      image: "/public/trends/zlan-2024.jpeg",
+      title: "Zlan 2024",
       info: "ZeratoR a révélé toutes les infos sur la ZLAN 2024 ! Lors d’un nouveau PowerPoint de qualité présenté le 6 avril, on a pu découvrir la liste des complètes des jeux, leurs règles particulières, les dats et le format global de la compétition !",
       link: "https://www.mandatory.gg/events/zlan/tout-savoir-sur-la-zlan-2024-jeux-dates-format-inscriptions-billeterie-et-plus-encore/",
       class: "div5",

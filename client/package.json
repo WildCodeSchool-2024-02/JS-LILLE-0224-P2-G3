@@ -1,3 +1,4 @@
+
 {
   "name": "@harmonia/client",
   "type": "module",
@@ -12,6 +13,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.1"
+    "sass": "^1.74.1"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.2.1",
@@ -30,3 +32,4 @@
     "*.{jsx,js}": "eslint --report-unused-disable-directives"
   }
 }
+
