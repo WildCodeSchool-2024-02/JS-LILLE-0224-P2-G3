@@ -1,40 +1,20 @@
-import { useState } from "react";
-import Api from "../Categories/Api";
+import { useNavigate } from "react-router-dom";
 
 function Search() {
-  const [search, setByName] = useState();
-  const [resultsSearchByName, setResultsSearchByName] = useState([]);
 
-  const getByName = (searchh) => {
-    Api.getByName(searchh).then((resp) => {
-      setResultsSearchByName(resp.data.results);
-    });
-  };
+  const navigate = useNavigate();
 
   return (
-    <div className="input-box">
+    <div className="input-box" style={{ padding: '30px' }}>
       <input
         type="search"
         name="search-form"
         id="search-form"
         className="search-input"
-        onChange={(e) => setByName(e.target.value)}
-        onKeyUp={() => getByName(search)}
+        onChange={(e) => navigate('/rechercher', { state: { query: e.target.value } })}
         placeholder="Search user"
+
       />
-      <div>
-        {resultsSearchByName &&
-          resultsSearchByName.map((item) => (
-            <div className="grid_categorie_card" key={`card-${item.id}`}>
-              <img
-                className="image_categorie"
-                src={item.background_image}
-                alt=""
-              />{" "}
-              {item.name}
-            </div>
-          ))}
-      </div>
     </div>
   );
 }

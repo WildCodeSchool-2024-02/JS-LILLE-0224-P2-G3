@@ -1,16 +1,21 @@
 import "./App.css";
-import CardStreamList from "./components/Stream/CardStreamList";
-import Trends from "./components/Trends/Trends";
-import Categories from "./components/Categories/Categories";
+import { Outlet } from "react-router-dom";
+// import CardStreamList from "./components/Stream/CardStreamList";
+// import Trends from "./components/Trends/Trends";
+// import Categories from "./components/Categories/Categories";
 import Search from "./components/Search/Search";
+
 
 function App() {
   return (
     <>
-      <Trends />
-      <CardStreamList />
     <Search />
-    <Categories/>
+      {/* <Trends />
+      <CardStreamList />
+    <Categories/> */}
+    <main>
+      <Outlet/>
+    </main>
     </>
   );
 }
