@@ -6,14 +6,14 @@ import Results from "./components/Search/Results";
 
 
 import App from "./App";
+import Home from "./Home";
 
 const router = createBrowserRouter([
   {
     element: <App />, children: [
       {
         path: "/",
-        // homepage
-        element: <App />,
+        element: <Home />,
       },
       {
         path: "/rechercher",
