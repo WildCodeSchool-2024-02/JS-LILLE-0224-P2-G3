@@ -1,7 +1,7 @@
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-import "./Search.scss";
 import Api from "../Categories/Api";
+import "./Search.scss";
 
 
 function Results() {
@@ -23,7 +23,6 @@ function Results() {
     return (
 
         <div>
-            toto
             <h2> Résultats pour {getByName}</h2>
             <div className="search_grid_container">
                 <div className="search_grid">
