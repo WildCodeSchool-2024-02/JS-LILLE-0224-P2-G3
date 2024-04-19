@@ -1,8 +1,70 @@
-.image_result {
-  width: 300px;
+.search_grid_container {
+  display: flex;
+  justify-content: center;
+}
+
+.search_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  grid-column-gap: 5%;
+  grid-row-gap: 2%;
+  justify-content: center;
+}
+
+.search_image {
+  width: 500px;
   height: 300px;
   object-fit: cover;
   display: flex;
-  border-radius: 15%;
-  flex-direction: column;
+  border-top-left-radius: 2em;
+  border-top-right-radius: 2em;
+}
+
+.search_info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 3%;
+  padding-top: 3%;
+  padding-right: 3%;
+  align-items: center;
+}
+.search_name {
+  color: white;
+  font-family: "Oswald", sans-serif;
+  font-size: large;
+}
+
+.search_card {
+  background-color: #303230;
+  border-radius: 2em;
+  padding-bottom: 7%;
+}
+.search_date {
+  font-family: Helvetica, sans-serif;
+  font-size: medium;
+  font-weight: 100;
+  color: rgb(197, 195, 195);
+}
+.platform {
+  font-family: Helvetica, sans-serif;
+  font-size: small;
+  font-weight: 100;
+  color: rgb(197, 195, 195);
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.platform_name {
+  margin-right: 1em;
+  display: flex;
+  flex-direction: row;
+}
+
+.rating {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
 }

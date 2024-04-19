@@ -1,5 +1,6 @@
 import logoTitle from "../../assets/images/logonavbar.png";
 import logoProfil from "../../assets/images/logoprofil.png";
+import Search from "../Search/Search";
 import "./Navbar.scss";
 
 function Navbar() {
@@ -35,6 +36,7 @@ function Navbar() {
           </div>
         </div>
       </div>
+      <Search />
     </div>
   );
 }
