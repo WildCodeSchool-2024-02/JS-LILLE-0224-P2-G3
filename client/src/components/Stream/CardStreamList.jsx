@@ -17,6 +17,7 @@ function CardStreamList() {
       image: "/public/twitch/maghla.jpeg",
       description:
         "Maghla, créatrice talentueuse, attire un large public grâce à son gameplay expert, rassemblant une communauté dévouée notamment lors de ses streams sur les jeux d'horreur",
+      video: "/public/twitch/maghla.mp4",
       class: "card2",
     },
     {
@@ -24,6 +25,7 @@ function CardStreamList() {
       image: "/public/twitch/domingo.jpeg",
       description:
         "Domingo, streamer très populaire sur Twitch grâce à son émission Popcorn basée sur des interviews et des jeux avec des célébrités actuelles, rassemble une communauté passionnée.",
+      video: "/public/twitch/domingo.mp4",
       class: "card3",
     },
     {
@@ -31,6 +33,7 @@ function CardStreamList() {
       image: "/public/twitch/mistermv.jpeg",
       description:
         "Mister MV, un streamer renommé sur Twitch, séduit son public avec son expertise dans les jeux vidéo rétro et son style de narration captivant, attirant une base de fans fidèles à chaque stream et vidéo Youtube.",
+      video: "/public/twitch/misterm.mp4",
       class: "card4",
     },
   ];
