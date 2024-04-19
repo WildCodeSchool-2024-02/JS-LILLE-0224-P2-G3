@@ -5,11 +5,12 @@ p {
   color: rgb(197, 195, 195);
 }
 h2 {
-  font-size: 4em;
+  font-size: 2em;
   margin-left: 1em;
   margin-top: 1em;
   color: white;
   font-family: "Oswald", sans-serif;
+  margin-bottom: 0.7em;
 }
 
 //    FOR ALL THE CARDS
@@ -115,6 +116,13 @@ p {
     box-sizing: content-box;
     color: white;
     cursor: pointer;
+  }
+  h2 {
+    font-size: 4em;
+    margin-left: 1em;
+    margin-top: 1em;
+    color: white;
+    font-family: "Oswald", sans-serif;
   }
 
   .focus_card {
