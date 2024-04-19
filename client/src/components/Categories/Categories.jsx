@@ -1,4 +1,4 @@
-import  { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Api from "./Api";
 import "./Categories.scss";
 
@@ -25,7 +25,7 @@ function Categories() {
 
   return (
     <div>
-      <h2> genre</h2>
+      <h2> CATÉGORIES</h2>
       <div className="grid_categorie_card">
         {!showAllCategs && (<>
           {categories.slice(0, 4).map((item) => (

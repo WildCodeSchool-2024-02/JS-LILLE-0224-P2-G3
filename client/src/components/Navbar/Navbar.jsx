@@ -1,7 +1,8 @@
-import logoTitle from "../../assets/images/logonavbar.png";
+
 import logoProfil from "../../assets/images/logoprofil.png";
 import Search from "../Search/Search";
 import "./Navbar.scss";
+
 
 function Navbar() {
   return (
@@ -9,7 +10,7 @@ function Navbar() {
       <div className="navBar">
         <div className="logo_titre_navbar">
           <div className="imglogo_navbar">
-            <img className="image_navbar_logo" src={logoTitle} alt="logo" />
+            <img className="image_navbar_logo" src="../public/logo/logo2.png" alt="logo" />
           </div>
         </div>
         <div className="anchor_filter_navbar">
@@ -20,9 +21,8 @@ function Navbar() {
               <li>CATEGORIES</li>
             </ul>
           </div>
-          <div className="filter_navbar">
-            <input className="searchnavbar" type="search" />
-          </div>
+
+          <Search />
         </div>
 
         <div className="logo_profil_navbar">
@@ -36,7 +36,7 @@ function Navbar() {
           </div>
         </div>
       </div>
-      <Search />
+
     </div>
   );
 }

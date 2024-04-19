@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
 }
-
 .search_grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -11,7 +10,6 @@
   grid-row-gap: 2%;
   justify-content: center;
 }
-
 .search_image {
   width: 500px;
   height: 300px;
@@ -20,7 +18,6 @@
   border-top-left-radius: 2em;
   border-top-right-radius: 2em;
 }
-
 .search_info {
   display: flex;
   flex-direction: row;
@@ -35,7 +32,6 @@
   font-family: "Oswald", sans-serif;
   font-size: large;
 }
-
 .search_card {
   background-color: #303230;
   border-radius: 2em;
@@ -56,15 +52,21 @@
   flex-direction: row;
   margin-top: 10px;
 }
-
 .platform_name {
   margin-right: 1em;
   display: flex;
   flex-direction: row;
 }
-
 .rating {
   margin-top: 10px;
   display: flex;
   justify-content: flex-end;
+}
+.filter_navbar {
+  display: flex;
+  justify-content: center;
+}
+.search_navbar {
+  margin-bottom: 1em;
+  border-radius: 5em;
 }
