@@ -38,9 +38,9 @@ function Categories() {
               <h4 className="categorie_name">{item.name}</h4>
             </div>
           ))}
-          <button type="button" onClick={() => setShowAllCategs(true)}>
-            show me more
-          </button>
+          <button className="button-with-logo" type="button" onClick={() => setShowAllCategs(true)}>
+      <img src="../public/button/arrow-down.png" alt="Logo" className="logo" />
+    </button>
         </>
 
         )}

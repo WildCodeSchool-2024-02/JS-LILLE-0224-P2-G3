@@ -1,39 +1,27 @@
-
-import logoProfil from "../../assets/images/logoprofil.png";
 import Search from "../Search/Search";
 import "./Navbar.scss";
 
 
 function Navbar() {
   return (
-    <div className="navbartop">
-      <div className="navBar">
+    <div className="navbar_top">
+      <div className="navbar">
         <div className="logo_titre_navbar">
           <div className="imglogo_navbar">
-            <img className="image_navbar_logo" src="../public/logo/logo2.png" alt="logo" />
+            <img className="image_navbar_logo" src="../public/logo/logo-final.png" alt="logo" />
           </div>
         </div>
         <div className="anchor_filter_navbar">
           <div className="anchor_navbar">
             <ul>
-              <li>TENDANCES</li>
-              <li>STREAMING</li>
-              <li>CATEGORIES</li>
+              <li>Tendances</li>
+              <li>Streaming</li>
+              <li>Catégories</li>
+              <li>Rechercher</li>
             </ul>
           </div>
 
           <Search />
-        </div>
-
-        <div className="logo_profil_navbar">
-          <img
-            className="image_navbar_profil"
-            src={logoProfil}
-            alt="logoProfil"
-          />
-          <div className="profil_navbar">
-            <p>Profil</p>
-          </div>
         </div>
       </div>
 

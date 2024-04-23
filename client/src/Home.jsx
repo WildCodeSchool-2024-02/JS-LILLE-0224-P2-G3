@@ -9,10 +9,14 @@ function Home() {
 
     return (
         <>
-            <img className="image" src="./public/background/imagetop.png" alt="" />
+            <div className="image_back_container">
+                <img className="image" src="./public/background/zelda.jpeg" alt="" />
+            </div>
             <Trends />
             <CardStreamList />
-            <img className="image2" src="./public/background/imagebot1.png" alt="" />
+            <div className="image_back_container">
+                <img className="image" src="./public/background/horizon.jpeg" alt="" />
+            </div>
             <Categories />
         </>
     );

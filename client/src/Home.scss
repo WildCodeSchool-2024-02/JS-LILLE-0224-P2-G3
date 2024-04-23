@@ -1,7 +1,16 @@
 .image {
-  width: 100%;
+  width: 65%;
+  border-radius: 2em;
+  object-fit: cover;
+  overflow: hidden;
 }
-
+.image_back_container {
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+  height: 500px;
+  border-radius: 2em;
+}
 .image2 {
   width: 100%;
   padding-top: 4%;
