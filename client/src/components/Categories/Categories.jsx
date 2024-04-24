@@ -31,12 +31,12 @@ function Categories() {
   return (
     <div>
       <h2> CATÉGORIES</h2>
-      <div className="grid_categorie_card">
+      <div className="grid_categories_card">
         {!showAllCategs && (
           <>
             {categories.slice(0, 4).map((item) => (
               <div
-                className="categorie_card"
+                className="categories_card"
                 key={`card-${item.name}`}
                 role="presentation"
                 onClick={() => {
@@ -46,11 +46,11 @@ function Categories() {
                 }}
               >
                 <img
-                  className="image_categorie"
+                  className="image_categories"
                   src={item.image_background}
                   alt=""
                 />
-                <h4 className="categorie_name">{item.name}</h4>
+                <h4 className="categories_name">{item.name}</h4>
               </div>
             ))}
             <button type="button" onClick={() => setShowAllCategs(true)}>
@@ -61,7 +61,7 @@ function Categories() {
         {showAllCategs &&
           categories.map((item) => (
             <div
-              className="categorie_card"
+              className="categories_card"
               key={`card-${item.name}`}
               role="presentation"
               onClick={() => {
@@ -71,11 +71,11 @@ function Categories() {
               }}
             >
               <img
-                className="image_categorie"
+                className="image_categories"
                 src={item.image_background}
                 alt=""
               />
-              <h4 className="categorie_name">{item.name}</h4>
+              <h4 className="categories_name">{item.name}</h4>
             </div>
           ))}
       </div>
