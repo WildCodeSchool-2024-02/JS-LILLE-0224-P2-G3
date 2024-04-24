@@ -26,7 +26,7 @@ function Search() {
           className="searchnavbar"
           value={query}
           onChange={handleChange}
-          placeholder="Rechercher votre prochain jeu"
+          placeholder="Rechercher"
         />
       </form>
     </div>
