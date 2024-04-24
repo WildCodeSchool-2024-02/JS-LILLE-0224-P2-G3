@@ -41,7 +41,7 @@ function Categories() {
                 role="presentation"
                 onClick={() => {
                   navigate("/decouvrir/categorie", {
-                    state: { CategoryId: item.id },
+                    state: { CategoryId: item.idGenre },
                   });
                 }}
               >

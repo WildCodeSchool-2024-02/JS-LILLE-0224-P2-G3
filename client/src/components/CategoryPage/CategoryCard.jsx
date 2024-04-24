@@ -4,16 +4,16 @@ import Api from "../Categories/Api";
 import "./CategoryCard.scss";
 
 function CategoryCard() {
-  const [game, setGame] = useState([]);
+  const [games, setGames] = useState([]);
   const { state } = useLocation();
 
   useEffect(() => {
-    const getGame = () => {
-      Api.getGame(state.CategoryId).then((resp) => {
-        setGame(resp.data.results);
+    const getGamesByCategory = () => {
+      Api.getGamesByCategory(state.CategoryId).then((resp) => {
+        setGames(resp.data.results);
       });
     };
-    getGame();
+    getGamesByCategory();
   }, [state]);
 
   return (
@@ -22,7 +22,7 @@ function CategoryCard() {
         <h2>GENRE</h2>
         <div className="category_grid_container">
           <div className="category_grid">
-            {game.map((jeu) => (
+            {games.map((jeu) => (
               <div key={jeu.id} className="category_card">
                 <img
                   className="category_image"
