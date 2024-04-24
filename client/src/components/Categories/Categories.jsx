@@ -25,7 +25,7 @@ function Categories() {
 
   return (
     <div>
-      <h2> CATÉGORIES</h2>
+      <h2 id="categ"> CATÉGORIES</h2>
       <div className="grid_categorie_card">
         {!showAllCategs && (<>
           {categories.slice(0, 4).map((item) => (
@@ -39,8 +39,8 @@ function Categories() {
             </div>
           ))}
           <button className="button-with-logo" type="button" onClick={() => setShowAllCategs(true)}>
-      <img src="../public/button/arrow-down.png" alt="Logo" className="logo" />
-    </button>
+            <img src="../public/button/arrow-down.png" alt="Logo" className="logo" />
+          </button>
         </>
 
         )}

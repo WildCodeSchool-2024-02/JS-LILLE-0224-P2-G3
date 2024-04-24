@@ -63,7 +63,7 @@ function Trends() {
 
   return (
     <>
-      <h2>TENDANCES</h2>
+      <h2 id="trends">TENDANCES</h2>
       <div className="all_cards">
         <div className="focus_card">
           <TrendingCard tendances={focusCard} />
