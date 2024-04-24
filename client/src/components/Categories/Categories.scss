@@ -26,6 +26,22 @@
   background-color: black;
   border-radius: 15%;
 }
+.logo {
+  width: 9%;
+}
+.button-with-logo {
+  /* Stylisation du bouton */
+  display: flex;
+  justify-content: center;
+  background-color: #161616;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
 
 @media screen and (min-width: 990px) {
   .image_categorie {
