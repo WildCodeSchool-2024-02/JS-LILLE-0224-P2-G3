@@ -1,15 +1,9 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 
-function FilterSearchPlatform({
-  resultsSearchByName,
-  setResultsSearchByName,
-  allGamesResults,
-}) {
+function FilterSearchPlatform({ setResultsSearchByName, allGamesResults }) {
   //      Declaration of state for the selected category and the filtered elements
   const [selectedPlatform, setSelectedPlatform] = useState("");
-  // eslint-disable-next-line no-unused-vars
-  const [filteredGames, setFilteredGames] = useState(resultsSearchByName);
 
   //      Function to handle the change of selected category
   const handleSelectChange = (event) => {
@@ -24,7 +18,6 @@ function FilterSearchPlatform({
         )
       );
       setResultsSearchByName(filtered);
-      setFilteredGames(filtered);
     }
   };
 
@@ -55,7 +48,6 @@ function FilterSearchPlatform({
 }
 
 FilterSearchPlatform.propTypes = {
-  resultsSearchByName: PropTypes.string.isRequired,
   setResultsSearchByName: PropTypes.string.isRequired,
   allGamesResults: PropTypes.string.isRequired,
 };

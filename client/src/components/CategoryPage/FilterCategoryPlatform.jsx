@@ -1,11 +1,8 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 
-function FilterCategoryPlatform({ games, setGames, allGames }) {
-  //      Declaration of state for the selected category and the filtered elements
+function FilterCategoryPlatform({ setGames, allGames }) {
   const [selectedPlatform, setSelectedPlatform] = useState("");
-  // eslint-disable-next-line no-unused-vars
-  const [filteredGames, setFilteredGames] = useState(games);
 
   //      Function to handle the change of selected category
   const handleSelectChange = (event) => {
@@ -20,7 +17,6 @@ function FilterCategoryPlatform({ games, setGames, allGames }) {
         )
       );
       setGames(filtered);
-      setFilteredGames(filtered);
     }
   };
 
@@ -40,8 +36,8 @@ function FilterCategoryPlatform({ games, setGames, allGames }) {
         <option value="PC">PC</option>
         <option value="Nintendo Switch">Nintendo Switch</option>
         <option value="Wii">Wii</option>
-        <option value="xbox One">xbox One</option>
-        <option value="xbox serie S/X">xbox serie S/X</option>
+        <option value="Xbox One">Xbox One</option>
+        <option value="Xbox serie S/X">Xbox serie S/X</option>
         <option value="PlayStation 3">PlayStation 3</option>
         <option value="PlayStation 4">PlayStation 4</option>
         <option value="PlayStation 5">PlayStation 5</option>
@@ -51,7 +47,6 @@ function FilterCategoryPlatform({ games, setGames, allGames }) {
 }
 
 FilterCategoryPlatform.propTypes = {
-  games: PropTypes.string.isRequired,
   setGames: PropTypes.string.isRequired,
   allGames: PropTypes.string.isRequired,
 };
