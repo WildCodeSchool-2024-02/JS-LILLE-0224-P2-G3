@@ -17,6 +17,7 @@ function CategoryCard() {
       });
     };
     getGamesByGenre();
+
   }, [state]);
 
   return (
@@ -31,17 +32,27 @@ function CategoryCard() {
         />
         <div className="category_grid_container">
           <div className="category_grid">
-            {games.map((jeu) => (
-              <div key={jeu.id} className="category_card">
+            {games.map((game) => (
+              <div key={game.id} className="category_card">
+
                 <img
                   className="category_image"
                   alt=""
-                  src={jeu.background_image}
+                  src={game.background_image}
                   style={{ width: "500px" }}
                 />
                 <div>
-                  <p className="category_name">{jeu.name}</p>
-                  <p className="rating">{jeu.rating} ⭐️</p>
+                  <p className="category_name">{game.name}</p>
+                  <p className="rating">{game.rating} ⭐️</p>
+                  <div className="platform">
+                    {game.platforms &&
+                      game.platforms.map((plat) => (
+                        <div className="platform_name" key={plat.platform.name}>
+                          {" "}
+                          {plat.platform.name}
+                        </div>
+                      ))}
+                  </div>
                 </div>
                 <div className="platform">
                   {jeu.platforms &&

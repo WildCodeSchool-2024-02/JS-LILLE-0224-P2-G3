@@ -10,11 +10,12 @@ const getCategories = axiosCreate.get(`/genres?key=${key}`);
 const getByName = (search) =>
   axiosCreate.get(`/games?search=${search}&key=${key}`);
 
-const getGamesByGenre = (id) =>
-  axiosCreate.get(`/games?genres=${id}&key=${key}`);
+const getGamesByCategory = (idGenre) =>
+  axiosCreate.get(`/games?genres=${idGenre}&key=${key}`);
 
 export default {
   getCategories,
   getByName,
-  getGamesByGenre,
+  getGamesByCategory,
+
 };

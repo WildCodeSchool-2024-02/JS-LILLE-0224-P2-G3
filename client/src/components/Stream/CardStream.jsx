@@ -1,15 +1,34 @@
+import { useState } from "react";
 import PropTypes from "prop-types";
 import "./CardStream.scss";
 
 function CardStream({ stream }) {
+  const [hover, setHover] = useState(false);
   return (
-    <div className={`${stream.class} card_stream`}>
+    <div  id="streaming" className={`${stream.class} card_stream`}>
       <div className="card_stream_container">
-        <img
-          className="cards_stream_image"
-          src={stream.image}
-          alt={stream.name}
-        />
+        {/* eslint-disable jsx-a11y/media-has-caption */}
+        <div
+          className="image_video"
+          onMouseEnter={() => setHover(true)}
+          onMouseLeave={() => setHover(false)}
+        >
+          {hover ? (
+            <video
+              className="video_streamer"
+              src={stream.video}
+              width="250"
+              loop
+              autoPlay
+            />
+          ) : (
+            <img
+              className="cards_stream_image"
+              src={stream.image}
+              alt={stream.name}
+            />
+          )}
+        </div>
         <div className="card_stream_info">
           <h4>{stream.name}</h4>
           <p>{stream.description}</p>
@@ -18,7 +37,6 @@ function CardStream({ stream }) {
     </div>
   );
 }
-
 CardStream.propTypes = {
   stream: PropTypes.shape({
     name: PropTypes.string.isRequired,
@@ -28,5 +46,4 @@ CardStream.propTypes = {
     class: PropTypes.string.isRequired,
   }).isRequired,
 };
-
 export default CardStream;
