@@ -7,6 +7,7 @@ import Results from "./components/Search/Results";
 import App from "./App";
 import Home from "./Home";
 import CategoryCard from "./components/CategoryPage/CategoryCard";
+import DeployCard from "./components/CategoryPage/DeployCard";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: "/decouvrir/categorie",
         element: <CategoryCard />,
+      },
+      {
+        path: "/decouvrir/categorie/jeu",
+        element: <DeployCard />,
       },
     ],
   },
