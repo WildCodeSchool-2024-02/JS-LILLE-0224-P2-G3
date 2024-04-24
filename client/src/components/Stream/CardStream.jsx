@@ -5,7 +5,7 @@ import "./CardStream.scss";
 function CardStream({ stream }) {
   const [hover, setHover] = useState(false);
   return (
-    <div className={`${stream.class} card_stream`}>
+    <div  id="streaming" className={`${stream.class} card_stream`}>
       <div className="card_stream_container">
         {/* eslint-disable jsx-a11y/media-has-caption */}
         <div
