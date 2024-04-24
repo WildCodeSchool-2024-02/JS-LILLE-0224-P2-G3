@@ -30,7 +30,7 @@ function Navbar() {
             <ul>
               <li>
                 <a
-                  href="#trends"
+                  href="#trending"
                   onClick={() => scrollToSection("trends")}
                 >
                   Tendances
@@ -39,14 +39,14 @@ function Navbar() {
               </li>
               <li>
                 <a
-                  href="#stream"
+                  href="#streaming"
                   onClick={() => scrollToSection("stream")}
                 >Streaming
                 </a>
               </li>
               <li>
                 <a
-                  href="#categ"
+                  href="#category"
                   onClick={() => scrollToSection("categ")}
                 >Catégories
                 </a>

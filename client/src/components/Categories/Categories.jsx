@@ -25,7 +25,7 @@ function Categories() {
 
   return (
     <div>
-      <h2 id="categ"> CATÉGORIES</h2>
+      <h2 id="category"> CATÉGORIES</h2>
       <div className="grid_categorie_card">
         {!showAllCategs && (<>
           {categories.slice(0, 4).map((item) => (
