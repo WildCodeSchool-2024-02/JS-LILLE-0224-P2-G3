@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Api from "./Api";
+import Api from "../../services/Api";
 import "./Categories.scss";
 
 function Categories() {
@@ -58,7 +58,7 @@ function Categories() {
               role="presentation"
               onClick={() => {
                 navigate("/decouvrir/categorie", {
-                  state: { CategoryId: item.id },
+                  state: { CategoryId: item.id , CategoryName: item.name},
                 });
               }}
             >
