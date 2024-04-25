@@ -1,4 +1,3 @@
-
 {
   "name": "@harmonia/client",
   "type": "module",
@@ -32,4 +31,3 @@
     "*.{jsx,js}": "eslint --report-unused-disable-directives"
   }
 }
-

@@ -15,7 +15,7 @@ function Search() {
   const handleSubmit = (e) => {
     e.preventDefault();
     navigate(`/rechercher?query=${query}`, {
-      state: { query }
+      state: { query },
     });
     setQuery("");
   };
