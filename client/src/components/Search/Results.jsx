@@ -18,11 +18,12 @@ function Results() {
 
   useEffect(() => {
     getByName();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state.query]);
 
   return (
     <div>
-      <h2> Résultats pour {getByName}</h2>
+      <h2> Résultats pour {state.query}</h2>
       <FilterSearchPlatform
         resultsSearchByName={resultsSearchByName}
         setResultsSearchByName={setResultsSearchByName}

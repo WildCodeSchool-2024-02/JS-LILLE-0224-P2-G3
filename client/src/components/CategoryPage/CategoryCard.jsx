@@ -55,8 +55,8 @@ function CategoryCard() {
                   </div>
                 </div>
                 <div className="platform">
-                  {jeu.platforms &&
-                    jeu.platforms.map((plat) => (
+                  {games.platforms &&
+                    games.platforms.map((plat) => (
                       <div className="platform_name" key={plat.platform.name}>
                         {" "}
                         {plat.platform.name}
