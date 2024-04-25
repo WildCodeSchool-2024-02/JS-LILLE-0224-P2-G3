@@ -1,7 +1,6 @@
-
 {
   "name": "@harmonia/client",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
@@ -32,4 +31,3 @@
     "*.{jsx,js}": "eslint --report-unused-disable-directives"
   }
 }
-
