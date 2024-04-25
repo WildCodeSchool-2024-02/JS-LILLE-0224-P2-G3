@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Api from "../Categories/Api";
+import Api from "../../services/Api";
 import "./Search.scss";
 import FilterSearchPlatform from "./FilterSearchPlatform";
 
@@ -18,11 +18,12 @@ function Results() {
 
   useEffect(() => {
     getByName();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state.query]);
 
   return (
     <div>
-      <h2> Résultats pour {getByName}</h2>
+      <h2> Résultats pour {state.query}</h2>
       <FilterSearchPlatform
         resultsSearchByName={resultsSearchByName}
         setResultsSearchByName={setResultsSearchByName}
@@ -43,15 +44,29 @@ function Results() {
                     {item.name}
                     <div className="platform">
                       {item.platforms &&
-                        item.platforms.slice(0, 3).map((plat) => (
-                          <div
-                            className="platform_name"
-                            key={plat.platform.name}
-                          >
-                            {" "}
-                            {plat.platform.name}
-                          </div>
-                        ))}
+                        item.platforms.map((plat) => {
+                          if (
+                            plat.platform.name === "Wii" ||
+                            plat.platform.name === "Nintendo Switch" ||
+                            plat.platform.name === "Xbox One" ||
+                            plat.platform.name === "Xbox Series S/X" ||
+                            plat.platform.name === "PC" ||
+                            plat.platform.name === "PlayStation 3" ||
+                            plat.platform.name === "PlayStation 4" ||
+                            plat.platform.name === "PlayStation 5"
+                          ) {
+                            return (
+                              <div
+                                className="platform_name"
+                                key={plat.platform.name}
+                              >
+                                {" "}
+                                {plat.platform.name}
+                              </div>
+                            );
+                          }
+                          return null;
+                        })}
                     </div>
                   </div>
                   <div className="search_date">
