@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
-import Api from "../Categories/Api";
+import Api from "../../services/Api";
 import FilterCategoryPlatform from "./FilterCategoryPlatform";
 import "./CategoryCard.scss";
 
@@ -23,7 +23,7 @@ function CategoryCard() {
   return (
     <div>
       <div>
-        <h2>GENRE</h2>
+        <h2>{state.CategoryName}</h2>
         <FilterCategoryPlatform
           games={games}
           setGames={setGames}

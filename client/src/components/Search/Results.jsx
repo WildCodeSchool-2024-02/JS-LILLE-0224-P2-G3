@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Api from "../Categories/Api";
+import Api from "../../services/Api";
 import "./Search.scss";
 import FilterSearchPlatform from "./FilterSearchPlatform";
 
