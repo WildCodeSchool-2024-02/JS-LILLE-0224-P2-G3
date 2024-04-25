@@ -7,7 +7,6 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(10, 1fr);
   grid-column-gap: 5%;
-  grid-row-gap: 2%;
   justify-content: center;
 }
 .category_container {
@@ -33,7 +32,7 @@
   background-color: #303230;
   border-radius: 2em;
   padding-bottom: 7%;
-  margin-bottom: 1.5em;
+  margin-bottom: 3em;
 }
 
 .rating {
