@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Api from "../Categories/Api";
+import Api from "../../services/Api";
 import "./Search.scss";
 import FilterSearchPlatform from "./FilterSearchPlatform";
 
@@ -18,11 +18,12 @@ function Results() {
 
   useEffect(() => {
     getByName();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state.query]);
 
   return (
     <div>
-      <h2> Résultats pour {getByName}</h2>
+      <h2> Résultats pour {state.query}</h2>
       <FilterSearchPlatform
         resultsSearchByName={resultsSearchByName}
         setResultsSearchByName={setResultsSearchByName}

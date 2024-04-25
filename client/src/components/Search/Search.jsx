@@ -8,11 +8,15 @@ function Search() {
 
   const handleChange = (e) => {
     setQuery(e.target.value);
+    navigate(`/rechercher?query=${e.target.value}`, {
+      state: { query: e.target.value },
+    });
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate(`/rechercher?query=${query}`);
+    navigate(`/rechercher?query=${query}`, {
+      state: { query }
+    });
     setQuery("");
   };
 
