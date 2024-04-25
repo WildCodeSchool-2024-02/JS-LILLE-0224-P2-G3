@@ -1,112 +1,50 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-.navBar {
+.navbar {
   display: flex;
-  flex-direction: column;
-}
-.anchor_filter_navbar {
-  display: flex;
+  flex-direction: row;
   justify-content: center;
-  flex-direction: column;
-}
-.navbartop {
-  color: #efefef;
-  background-color: #161616;
+
+  padding-top: 1%;
 }
 .image_navbar_logo {
-  width: 55%;
-  margin-bottom: 2em;
-  margin-top: 4%;
-  margin-bottom: 4%;
-}
-.imglogo_navbar {
-  display: flex;
-  justify-content: center;
-}
-.logo_profil_navbar {
-  width: 100%;
+  width: 10%;
   position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: end;
+  left: 1%;
 }
-.image_navbar_profil {
-  width: 11%;
-  margin-top: 0.3em;
-  margin-right: 0.3em;
+.anchor_navbar ul li a {
+  text-decoration: none;
+  color: #e33335;
 }
 .anchor_navbar ul {
   list-style-type: none;
   display: flex;
   flex-direction: row;
   margin-bottom: 0.5em;
-  justify-content: center;
-}
-
-.anchor_navbar li {
-  font-family: "Oswald", sans-serif;
-  font-weight: 900;
+  color: #e33335;
+  font-family: "Barlow", Courier, monospace;
+  font-weight: 600;
   font-size: large;
-  margin-left: 1em;
+  gap: 105%;
+  justify-content: center;
+  padding-left: 39%;
 }
-
-.filter_navbar {
+.navbar_top {
   display: flex;
+  flex-direction: row;
   justify-content: center;
 }
-.searchnavbar {
-  margin-bottom: 1em;
-  border-radius: 5em;
+.anchor_filter_navbar {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  left: -10%;
 }
-.profil_navbar p {
-  font-weight: 700;
-  font-size: 0.5em;
-  margin-right: 2em;
+.search_logo {
+  width: 25px;
 }
-
-@media screen and (min-width: 990px) {
-  .imglogo_navbar {
-    justify-content: start;
-  }
-  .image_navbar_logo {
-    width: 25%;
-    position: absolute;
-    top: -2%;
-    left: 2%;
-  }
-  .profil_navbar {
-    font-size: 2em;
-    margin-right: -0.35em;
-  }
-  .image_navbar_profil {
-    width: 5%;
-  }
-  .logo_profil_navbar {
-    padding-right: 2em;
-  }
-  .searchnavbar {
-    margin-left: 22%;
-    height: 3.5em;
-    width: 50%;
-  }
-  .anchor_navbar li {
-    font-size: xx-large;
-  }
-  .anchor_navbar ul {
-    padding-top: 13%;
-    margin-left: 20%;
-    gap: 12px;
-  }
-  .profil_navbar p {
-    font-weight: 700;
-    font-size: 0.5em;
-    margin-right: 1.5em;
-  }
-  .anchor_navbar li:hover {
-    color: red;
-    transform: scale(1.1);
-  }
+button {
+  background-color: #eff0f6;
+  border: none;
 }

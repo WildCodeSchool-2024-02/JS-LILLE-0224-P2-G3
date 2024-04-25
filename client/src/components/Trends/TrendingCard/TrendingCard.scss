@@ -1,21 +1,21 @@
 body {
-  background-color: #161616;
+  background-color: #eff0f6;
 }
 p {
-  color: rgb(197, 195, 195);
+  color: rgb(57, 55, 55);
 }
 h2 {
   font-size: 2em;
   margin-left: 1em;
   margin-top: 1em;
-  color: white;
+  color: #f9fae8;
   font-family: "Oswald", sans-serif;
   margin-bottom: 0.7em;
 }
 
 //    FOR ALL THE CARDS
 .trending_card_container {
-  background-color: #303230;
+  background-color: #ffabb3;
   margin-left: 1em;
   border-radius: 2em;
   padding: 1em;
@@ -25,7 +25,7 @@ h2 {
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  // overflow: hidden;
   padding-top: 0px;
   padding-right: 0px;
   padding-left: 0px;
@@ -58,6 +58,8 @@ p {
 
 .trending_card_image {
   width: 100%;
+  border-radius: 2em;
+  object-fit: cover;
 }
 
 .trending_title {
@@ -112,27 +114,45 @@ p {
 @media screen and (min-width: 990px) {
   //    FOR ALL THE CARDS
   .trending_card_container {
-    background-color: #303230;
+    // background-color: #303230;
     box-sizing: content-box;
-    color: white;
+    color: #f9fae8;
     cursor: pointer;
+    padding-bottom: 0px;
+  }
+  .all_cards {
+    background-color: #ffabb3;
+    border-radius: 2em;
+    display: flex;
+    justify-content: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    flex-direction: column;
   }
   h2 {
-    font-size: 4em;
+    font-size: xxx-large;
+    // font-size: 4em;
+    font-weight: 800;
     margin-left: 1em;
     margin-top: 1em;
-    color: white;
-    font-family: "Oswald", sans-serif;
+    color: #e33335;
+    // font-family: "Oswald", sans-serif;
+    font-family: "Barlow", sans-serif;
   }
 
   .focus_card {
     display: flex;
     justify-content: center;
-    width: 60%;
   }
 
-  .focus_card_container {
-    width: 100%;
+  .image_container {
+    padding-right: 2%;
+
+    padding-bottom: 0px;
+    padding-left: 4%;
+    padding-top: 2%;
   }
 
   .focus_card_mobile {
@@ -140,15 +160,9 @@ p {
   }
   //    CARDS DISPOSITION : FLEX
 
-  .all_cards {
-    display: flex;
-    flex-direction: row;
-  }
   .otherCards {
     display: flex;
-    width: 60%;
-    flex-wrap: wrap;
-    align-content: center;
+    justify-content: center;
   }
 
   .otherCards {
@@ -159,21 +173,48 @@ p {
   }
   .focus_card {
     .trending_card_container {
-      width: 45vw;
-      height: 85vh;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+  .focus_card {
+    .trending_card_image {
+      width: 600px;
+      height: 400px;
+      object-fit: cover;
+    }
+  }
+  .otherCards {
+    .trending_card_image {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
     }
   }
 
   .buttons {
     display: none;
   }
-
+  .trending_info {
+    text-align: left;
+    margin-right: 10%;
+  }
+  .trending_title {
+    text-align: left;
+  }
+  .otherCards {
+    .trending_title {
+      text-align: center;
+    }
+  }
   //    HIDE TEXT CARDS 2 / 3 / 4 / 5
   .otherCards p {
     display: none;
   }
   p {
-    margin-left: 5%;
-    margin-right: 5%;
+    text-align: center;
   }
 }
