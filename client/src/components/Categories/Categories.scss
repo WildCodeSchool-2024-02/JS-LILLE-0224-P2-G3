@@ -1,11 +1,11 @@
-.image_categorie {
+.image_category {
   width: 300px;
   height: 300px;
   object-fit: cover;
   display: flex;
   border-radius: 15%;
 }
-.categorie_card {
+.categories_card {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,7 +13,7 @@
   padding-bottom: 5%;
 }
 
-.grid_categorie_card h4 {
+.grid_category_card h4 {
   width: 300px;
   height: 300px;
   display: flex;
@@ -33,7 +33,7 @@
   /* Stylisation du bouton */
   display: flex;
   justify-content: center;
-  background-color: #161616;
+  background-color: #eff0f6;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -44,11 +44,11 @@
 }
 
 @media screen and (min-width: 990px) {
-  .image_categorie {
+  .image_category {
     flex-direction: column;
   }
 
-  .grid_categorie_card {
+  .grid_category_card {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
@@ -56,14 +56,14 @@
     grid-row-gap: 2%;
     align-items: center;
   }
-  .categorie_card {
+  .categories_card {
     padding-bottom: 0;
   }
 
-  .grid_categorie_card h4 {
+  .grid_categories_card h4 {
     opacity: 0;
   }
-  .grid_categorie_card h4:hover {
+  .grid_categories_card h4:hover {
     opacity: 0.8;
     background-color: rgb (0, 0, 0, 0.1);
   }

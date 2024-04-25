@@ -1,30 +1,33 @@
 import {
-    createContext, useContext, useState,
-} from "react";
+    createContext, useContext, useMemo, useState, useCallback
+  } from "react";
 
-const PageContext = createContext();
+  const PageContext = createContext ();
 
-export function PageProvider({
+  export function PageProvider ({
     // eslint-disable-next-line react/prop-types
     children
-}) {
+  }) {
     const [page, setPage] = useState(1);
-    const NexthandleClick = () => {
-        setPage(page + 1)
-    }
-    const PrevioushandleClick = () => {
+    const NexthandleClick = useCallback(() => {
+        setPage(page + 1);
+    }, [page]);
+
+    const PrevioushandleClick = useCallback(() => {
         if (page > 1) {
             setPage(page - 1);
         }
-    }
+    }, [page]);
+    const CurrentPage = useMemo(() => ({ page, setPage, NexthandleClick, PrevioushandleClick }), [page, NexthandleClick, PrevioushandleClick]);
+
     return (
         <PageContext.Provider
-            // eslint-disable-next-line react/jsx-no-constructed-context-values
-            value={{ page, setPage, NexthandleClick, PrevioushandleClick }}
+          
+          value={CurrentPage}
         >
-            {children}
-        </PageContext.Provider>
-    );
-}
-export const usePage =
+         {children}
+       </PageContext.Provider>
+     );
+  }
+  export const usePage =
     () => useContext(PageContext);

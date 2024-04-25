@@ -26,33 +26,32 @@ const getCategories = () => {
   return (
     <div>
       <h2 id="category"> CATÉGORIES</h2>
-      <div className="grid_categorie_card">
+      <div className="grid_category_card">
         {!showAllCategs && (<>
           {categories.slice(0, 4).map((item) => (
-            <div className="categorie_card" key={`card-${item.name}`}>
+            <div className="categories_card" key={`card-${item.name}`}>
               <img
-                className="image_categorie"
+                className="image_category"
                 src={item.image_background}
                 alt=""
               />
-              <h4 className="categorie_name">{item.name}</h4>
+              <h4 className="category_name">{item.name}</h4>
             </div>
           ))}
           <button className="button-with-logo" type="button" onClick={() => setShowAllCategs(true)}>
-            <img src="../public/button/arrow-down.png" alt="Logo" className="logo" />
+            <img src="/public/button/arrow-down.png" alt="Logo" className="logo" />
           </button>
         </>
-
         )}
         {showAllCategs && (
           categories.map((item) => (
-            <div className="categorie_card" key={`card-${item.name}`}>
+            <div className="categories_card" key={`card-${item.name}`}>
               <img
-                className="image_categorie"
+                className="image_category"
                 src={item.image_background}
                 alt=""
               />
-              <h4 className="categorie_name">{item.name}</h4>
+              <h4 className="category_name">{item.name}</h4>
             </div>
           )))}
       </div>
