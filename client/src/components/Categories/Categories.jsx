@@ -53,14 +53,14 @@ function Categories() {
             ))}
           
               <button
-                className="button-with-logo"
+                className="button_up_down"
                 type="button"
                 onClick={handleShowAllCategs}
               >
                 <img
                   src="../public/button/arrow-down.png"
                   alt="Logo"
-                  className="logo"
+                  className="arrow_logo"
                 />
               </button>
             
@@ -88,14 +88,14 @@ function Categories() {
           ))}
         {showArrowUp && (
           <button
-            className="button-with-logo"
+            className="button_up_down"
             type="button"
             onClick={handleHideAllCategs}
           >
             <img
               src="../public/button/arrow-up.png"
               alt="Logo"
-              className="logo"
+              className="arrow_logo"
             />
           </button>
         )}
