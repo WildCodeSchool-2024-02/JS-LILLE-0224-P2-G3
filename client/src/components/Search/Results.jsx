@@ -18,7 +18,6 @@ function Results() {
 
   useEffect(() => {
     getByName();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state.query]);
 
   return (
