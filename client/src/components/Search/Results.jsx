@@ -1,6 +1,8 @@
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { usePage } from "../../contexts/PageContext";
 import Api from "../../services/Api";
+
 import "./Search.scss";
 import FilterSearchPlatform from "./FilterSearchPlatform";
 
@@ -9,8 +11,12 @@ function Results() {
   const [allGamesResults, setAllGamesResults] = useState();
   const { state } = useLocation();
 
+  const { page, PrevioushandleClick, NexthandleClick } = usePage();
+
+  
+
   const getByName = () => {
-    Api.getByName(state.query).then((resp) => {
+    Api.getByName(state.query, page).then((resp) => {
       setResultsSearchByName(resp.data.results);
       setAllGamesResults(resp.data.results);
     });
@@ -19,7 +25,7 @@ function Results() {
   useEffect(() => {
     getByName();
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [state.query]);
+  }, [state.query, page]);
 
   return (
     <div>
@@ -62,6 +68,15 @@ function Results() {
                 </div>
               </div>
             ))}
+            <div className="pagination">
+            <button type="button" onClick={PrevioushandleClick}>
+              précédent
+            </button>
+            <p>{page}</p>
+            <button type="button" onClick={NexthandleClick}>
+              suivant
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -69,3 +84,4 @@ function Results() {
 }
 
 export default Results;
+
