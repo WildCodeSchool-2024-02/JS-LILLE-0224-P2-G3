@@ -1,27 +1,40 @@
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { usePage } from "../../contexts/PageContext";
-import Api from "../Categories/Api";
+import Api from "../../services/Api";
+
 import "./Search.scss";
+import FilterSearchPlatform from "./FilterSearchPlatform";
 
 function Results() {
   const [resultsSearchByName, setResultsSearchByName] = useState([]);
-  const { page, PrevioushandleClick, NexthandleClick } = usePage();
-
+  const [allGamesResults, setAllGamesResults] = useState();
   const { state } = useLocation();
 
-  useEffect(() => {
-    const getByName = () => {
-      Api.getByName(state.query, page).then((resp) => {
-        setResultsSearchByName(resp.data.results);
-      });
-    };
+  const { page, PrevioushandleClick, NexthandleClick } = usePage();
 
+  
+
+  const getByName = () => {
+    Api.getByName(state.query, page).then((resp) => {
+      setResultsSearchByName(resp.data.results);
+      setAllGamesResults(resp.data.results);
+    });
+  };
+
+  useEffect(() => {
     getByName();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state.query, page]);
+
   return (
     <div>
       <h2> Résultats pour {state.query}</h2>
+      <FilterSearchPlatform
+        resultsSearchByName={resultsSearchByName}
+        setResultsSearchByName={setResultsSearchByName}
+        allGamesResults={allGamesResults}
+      />
       <div className="search_grid_container">
         <div className="search_grid">
           {resultsSearchByName &&
@@ -55,7 +68,7 @@ function Results() {
                 </div>
               </div>
             ))}
-          <div className="pagination">
+            <div className="pagination">
             <button type="button" onClick={PrevioushandleClick}>
               précédent
             </button>
@@ -71,3 +84,4 @@ function Results() {
 }
 
 export default Results;
+

@@ -33,7 +33,7 @@ function CardStreamList() {
       image: "/public/twitch/mistermv.jpeg",
       description:
         "Mister MV, un streamer renommé sur Twitch, séduit son public avec son expertise dans les jeux vidéo rétro et son style de narration captivant, attirant une base de fans fidèles à chaque stream et vidéo Youtube.",
-      video: "/public/twitch/misterm.mp4",
+      video: "/public/twitch/mistermv.mp4",
       class: "card4",
     },
   ];
@@ -58,7 +58,7 @@ function CardStreamList() {
 
   return (
     <>
-      <div>
+      <div  id="streaming">
         {!showAllCards && (
           <div>
             <div>
