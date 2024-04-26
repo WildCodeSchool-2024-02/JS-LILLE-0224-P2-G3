@@ -49,7 +49,11 @@ h4 {
 .player-wrapper {
   width: 80%;
 }
-
+.video_streamer {
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  width: 100%;
+}
 //    RESPONSIVE : MOBILE VERSION
 
 @media screen and (max-width: 990px) {
@@ -67,10 +71,18 @@ h4 {
   }
 
   //    BUTTON
-  .button {
+  .button_up_down {
     display: flex;
     justify-content: center;
-    padding: 0.5em;
-    border-radius: 1em;
+    background-color: #eff0f6;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  .arrow_logo {
+    width: 9%;
   }
 }
