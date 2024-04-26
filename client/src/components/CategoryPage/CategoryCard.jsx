@@ -1,7 +1,7 @@
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Api from "../../services/Api";
-import FilterCategoryPlatform from "./FilterCategoryPlatform";
+import FilterCategoryPlatform from "../Filter/FilterCategoryPlatform"
 import "./CategoryCard.scss";
 
 function CategoryCard() {
