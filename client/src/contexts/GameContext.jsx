@@ -6,16 +6,16 @@ const GameContext = createContext();
 
 export function GameProvider({ children }) {
   const openGameWebsite = useCallback(async (gameId) => {
-    // useCallback est un hook qui permet de stocker l'argument et le renvoyer
-    // async permet d'executer le script une fois que le site est chargé
+    // useCallback ia a hook who stock the argument et resend it
+    // async allow the execution of the script when the website is loaded
     try {
-      // try permet d'envelopper le code et si une erreur apparait pendant l'execution le catch se declenche
+      // try allow to wrap the code to protect him if an error occured when the execution of the code
       const response = await Api.getWebSite(gameId);
-      // await permet d'attendre que la valeur de la fonction dois disponible car Api.getWebSite(gameId) peut prendre du temps
+      // await allow to wait that the value of the fonction is available, the execution of Api.getWebSite(gameId) can take time
       const game = response.data;
       if (game.website) {
         window.open(game.website, "_blank");
-        // window open permet d'ouvir le site dans une nouvelle fenetre
+        // window open allow to open on a new web tab the website
       } else {
         console.error("No website available for this game.");
       }
@@ -25,7 +25,7 @@ export function GameProvider({ children }) {
   }, []);
 
   const contextValue = useMemo(
-    // useMemo suite erreur Eslint c'est un hook qui permet de mettre en stock le resultat d'un autre hook
+    // useMemo is a hook who allow to stock the result of an another hook
     () => ({
       openGameWebsite,
     }),
