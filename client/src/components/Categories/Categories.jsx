@@ -66,6 +66,7 @@ function Categories() {
               onClick={() => {
                 navigate("/decouvrir/categorie", {
                   state: { CategoryId: item.id, CategoryName: item.name },
+
                 });
               }}
             >
