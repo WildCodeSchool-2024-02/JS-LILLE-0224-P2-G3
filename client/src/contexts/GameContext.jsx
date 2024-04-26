@@ -11,10 +11,10 @@ export function GameProvider({ children }) {
     try {
       // try permet d'envelopper le code et si une erreur apparait pendant l'execution le catch se declenche
       const response = await Api.getWebSite(gameId);
+      // await permet d'attendre que la valeur de la fonction dois disponible car Api.getWebSite(gameId) peut prendre du temps
       const game = response.data;
       if (game.website) {
         window.open(game.website, "_blank");
-
         // window open permet d'ouvir le site dans une nouvelle fenetre
       } else {
         console.error("No website available for this game.");
@@ -25,7 +25,7 @@ export function GameProvider({ children }) {
   }, []);
 
   const contextValue = useMemo(
-    // useMemo demander par Eslint hook qui permet de mettre en stock le resultat d'un autre hook
+    // useMemo suite erreur Eslint c'est un hook qui permet de mettre en stock le resultat d'un autre hook
     () => ({
       openGameWebsite,
     }),
