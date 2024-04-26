@@ -1,7 +1,7 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Search from "../Search/Search";
 import "./Navbar.scss";
-
 
 function Navbar() {
   const [isSearchVisible, setSearchVisible] = useState(false);
@@ -11,7 +11,6 @@ function Navbar() {
   };
 
   const scrollToSection = (id) => {
-
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
@@ -22,38 +21,64 @@ function Navbar() {
       <div className="navbar">
         <div className="logo_titre_navbar">
           <div className="imglogo_navbar">
-            <img className="image_navbar_logo" src="../public/logo/logo-final.png" alt="logo" />
+            <img
+              className="image_navbar_logo"
+              src="../public/logo/logo-final.png"
+              alt="logo"
+            />
           </div>
         </div>
         <div className="anchor_filter_navbar">
           <div className="anchor_navbar">
             <ul>
+            <li>
+            <Link to="./">
+                <button type="button">
+                  <img
+                    className="home_logo"
+                    src="../../../public/button/home.png"
+                    alt="home"
+                  />
+                </button>
+                </Link>
+                </li>
               <li>
-                <a
-                  href="#trending"
-                  onClick={() => scrollToSection("trends")}
-                >
-                  Tendances
-                </a>
-
+                <Link to="./">
+                  <a
+                    href="#trending"
+                    onClick={() => scrollToSection("trending")}
+                  >
+                    Tendances
+                  </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#streaming"
-                  onClick={() => scrollToSection("stream")}
-                >Streaming
-                </a>
+                <Link to="./">
+                  <a
+                    href="#streaming"
+                    onClick={() => scrollToSection("streaming")}
+                  >
+                    Streaming
+                  </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#category"
-                  onClick={() => scrollToSection("categ")}
-                >Catégories
-                </a>
+                <Link to="./">
+                  <a
+                    href="#category"
+                    onClick={() => scrollToSection("category")}
+                  >
+                    Catégories
+                  </a>
+                </Link>
               </li>
               <li>
                 <button type="button" onClick={toggleSearch}>
-                  <img className="search_logo" src="../../../public/button/rechercher.png" alt="rechercher" />
+                  <img
+                    className="search_logo"
+                    src="../../../public/button/rechercher.png"
+                    alt="rechercher"
+                  />
                 </button>
               </li>
             </ul>
@@ -62,7 +87,6 @@ function Navbar() {
           {isSearchVisible && <Search />}
         </div>
       </div>
-
     </div>
   );
 }
