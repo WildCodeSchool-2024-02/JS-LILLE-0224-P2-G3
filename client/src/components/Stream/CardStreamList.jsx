@@ -58,12 +58,10 @@ function CardStreamList() {
 
   return (
     <>
-      <div  id="streaming">
+      <div id="streaming">
         {!showAllCards && (
           <div>
-            <div>
-              <h2>STREAM</h2>
-            </div>
+            <h2>STREAMING</h2>
             <div className="streamer_list">
               {streamerList.slice(0, 2).map((streamer) => (
                 <CardStream stream={streamer} key={streamer.name} />
@@ -82,7 +80,7 @@ function CardStreamList() {
         {showAllCards && (
           <div>
             <div>
-              <h2>STREAM</h2>
+              <h2>STREAMING</h2>
             </div>
             <div className="streamer_list">
               {streamerList.map((streamer) => (
