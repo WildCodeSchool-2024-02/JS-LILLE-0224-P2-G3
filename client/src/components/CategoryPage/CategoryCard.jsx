@@ -17,7 +17,6 @@ function CategoryCard() {
       });
     };
     getGamesByGenre();
-
   }, [state]);
 
   return (
@@ -34,7 +33,6 @@ function CategoryCard() {
           <div className="category_grid">
             {games.map((game) => (
               <div key={game.id} className="category_card">
-
                 <img
                   className="category_image"
                   alt=""
@@ -46,22 +44,30 @@ function CategoryCard() {
                   <p className="rating">{game.rating} ⭐️</p>
                   <div className="platform">
                     {game.platforms &&
-                      game.platforms.map((plat) => (
-                        <div className="platform_name" key={plat.platform.name}>
-                          {" "}
-                          {plat.platform.name}
-                        </div>
-                      ))}
+                      game.platforms.map((plat) => {
+                        if (
+                          plat.platform.name === "Wii" ||
+                          plat.platform.name === "Nintendo Switch" ||
+                          plat.platform.name === "Xbox One" ||
+                          plat.platform.name === "Xbox Series S/X" ||
+                          plat.platform.name === "PC" ||
+                          plat.platform.name === "PlayStation 3" ||
+                          plat.platform.name === "PlayStation 4" ||
+                          plat.platform.name === "PlayStation 5"
+                        ) {
+                          return (
+                            <div
+                              className="platform_name"
+                              key={plat.platform.name}
+                            >
+                              {" "}
+                              {plat.platform.name}
+                            </div>
+                          );
+                        }
+                        return null;
+                      })}
                   </div>
-                </div>
-                <div className="platform">
-                  {games.platforms &&
-                    games.platforms.map((plat) => (
-                      <div className="platform_name" key={plat.platform.name}>
-                        {" "}
-                        {plat.platform.name}
-                      </div>
-                    ))}
                 </div>
               </div>
             ))}
