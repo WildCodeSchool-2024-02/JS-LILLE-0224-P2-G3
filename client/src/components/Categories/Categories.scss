@@ -12,7 +12,6 @@
   flex-direction: column;
   margin-bottom: 10%;
 }
-
 .grid_categories_card h4 {
   width: 300px;
   height: 300px;
@@ -33,7 +32,7 @@
   /* Stylisation du bouton */
   display: flex;
   justify-content: center;
-  background-color: #161616;
+  background-color: #eff0f6;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -44,6 +43,9 @@
 }
 
 @media screen and (min-width: 990px) {
+  .image_categories {
+    flex-direction: column;
+  }
   .grid_categories_card {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -53,7 +55,6 @@
   .categories_card {
     padding-bottom: 0;
   }
-
   .grid_categories_card h4 {
     opacity: 0;
   }
