@@ -31,17 +31,17 @@ function Navbar() {
         <div className="anchor_filter_navbar">
           <div className="anchor_navbar">
             <ul>
-            <li>
-            <Link to="./">
-                <button type="button">
-                  <img
-                    className="home_logo"
-                    src="../../../public/button/home.png"
-                    alt="home"
-                  />
-                </button>
+              <li>
+                <Link to="./">
+                  <button type="button">
+                    <img
+                      className="home_logo"
+                      src="../../../public/button/home.png"
+                      alt="home"
+                    />
+                  </button>
                 </Link>
-                </li>
+              </li>
               <li>
                 <Link to="./">
                   <a
