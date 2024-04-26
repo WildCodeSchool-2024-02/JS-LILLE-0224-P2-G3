@@ -1,3 +1,8 @@
+.category_title {
+  margin-top: 2em;
+  color: #e33335;
+}
+
 .category_grid_container {
   display: flex;
   justify-content: center;
@@ -32,11 +37,26 @@
   background-color: #303230;
   border-radius: 2em;
   padding-bottom: 7%;
-  margin-bottom: 3em;
+  margin-top: 3em;
 }
 
 .rating {
   margin-top: 10px;
   display: flex;
   justify-content: flex-end;
+}
+
+@media screen and (max-width: 990px) {
+  .category_grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .category_image {
+    width: 300px;
+    height: 200px;
+  }
+  .category_card {
+    width: 300px;
+  }
 }

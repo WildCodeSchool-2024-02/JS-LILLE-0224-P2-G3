@@ -22,7 +22,7 @@ function CategoryCard() {
   return (
     <div>
       <div>
-        <h2>{state.CategoryName}</h2>
+        <h2 className="category_title">{state.CategoryName}</h2>
         <FilterCategoryPlatform
           games={games}
           setGames={setGames}
@@ -37,7 +37,6 @@ function CategoryCard() {
                   className="category_image"
                   alt=""
                   src={game.background_image}
-                  style={{ width: "500px" }}
                 />
                 <div>
                   <p className="category_name">{game.name}</p>
