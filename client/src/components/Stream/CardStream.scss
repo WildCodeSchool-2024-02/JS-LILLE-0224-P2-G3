@@ -46,14 +46,17 @@ h4 {
   display: flex;
 }
 
-.player-wrapper {
-  width: 80%;
-}
 .video_streamer {
   border-top-left-radius: 1em;
   border-top-right-radius: 1em;
   width: 100%;
 }
+
+//    Arrows
+.button_up_down {
+  display: none;
+}
+
 //    RESPONSIVE : MOBILE VERSION
 
 @media screen and (max-width: 990px) {
