@@ -32,14 +32,14 @@ function Navbar() {
           <div className="anchor_navbar">
             <ul>
               <li>
-                <Link to="./">
-                  <button type="button">
+                <Link to="./" type="button">
+                 
                     <img
                       className="home_logo"
                       src="/public/button/home.png"
                       alt="home"
                     />
-                  </button>
+                 
                 </Link>
               </li>
               <li>
