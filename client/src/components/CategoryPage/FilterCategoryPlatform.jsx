@@ -22,7 +22,7 @@ function FilterCategoryPlatform({ setGames, allGames }) {
   };
 
   return (
-    <div className="toto">
+    <div>
       <label htmlFor="platform-select" style={{ color: "white" }}>
         Choisir une plateforme :
       </label>
