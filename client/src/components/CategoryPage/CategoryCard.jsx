@@ -1,13 +1,18 @@
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { useGame } from "../../contexts/GameContext";
 import Api from "../../services/Api";
-import FilterCategoryPlatform from "./FilterCategoryPlatform";
+import FilterCategoryPlatform from "../Filter/FilterCategoryPlatform"
 import "./CategoryCard.scss";
 
 function CategoryCard() {
   const [games, setGames] = useState([]);
   const [allGames, setAllGames] = useState([]);
   const { state } = useLocation();
+  const { openGameWebsite } = useGame();
+  const handleOpenGameWebsite = (gameId) => {
+    openGameWebsite(gameId);
+  };
 
   useEffect(() => {
     const getGamesByGenre = () => {
