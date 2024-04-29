@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Search from "../Search/Search";
 import "./Navbar.scss";
 
@@ -30,31 +31,49 @@ function Navbar() {
         <div className="anchor_filter_navbar">
           <div className="anchor_navbar">
             <ul>
-              <li className="li_">
-                <a href="#trending" onClick={() => scrollToSection("trends")}>
-                  Tendances
-                </a>
-              </li>
               <li>
-                <a href="#streaming" onClick={() => scrollToSection("stream")}>
-                  Streaming
-                </a>
-              </li>
-              <li>
-                <a href="#category" onClick={() => scrollToSection("categ")}>
-                  Catégories
-                </a>
-              </li>
-              <li className="li_button">
-                <div className="button_search">
-                  <button type="button" onClick={toggleSearch}>
+                <Link to="./" type="button">
+                 
                     <img
-                      className="search_logo"
-                      src="../../../public/button/rechercher.png"
-                      alt="rechercher"
+                      className="home_logo"
+                      src="/public/button/home.png"
+                      alt="home"
                     />
-                  </button>
-                </div>
+                 
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="./#trending"
+                  onClick={() => scrollToSection("trending")}
+                >
+                  Tendances
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="./#streaming"
+                  onClick={() => scrollToSection("streaming")}
+                >
+                  Streaming
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="./#category"
+                  onClick={() => scrollToSection("category")}
+                >
+                  Catégories
+                </Link>
+              </li>
+              <li>
+                <button type="button" onClick={toggleSearch}>
+                  <img
+                    className="search_logo"
+                    src="/public/button/rechercher.png"
+                    alt="rechercher"
+                  />
+                </button>
               </li>
             </ul>
             <div className="search_navbar">{isSearchVisible && <Search />}</div>

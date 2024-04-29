@@ -1,7 +1,7 @@
 .navbar {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   padding-top: 1%;
   background-color: #eff0f6;
   position: fixed;
@@ -50,6 +50,10 @@
 
 .search_logo {
   width: 20px;
+}
+
+.home_logo {
+  width: 25px;
 }
 
 button {
