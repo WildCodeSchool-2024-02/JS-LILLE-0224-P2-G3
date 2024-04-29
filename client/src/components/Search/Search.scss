@@ -74,6 +74,8 @@
   display: flex;
   justify-content: space-between;
   align-content: center;
+}
+
 @media screen and (max-width: 990px) {
   .search_grid {
     display: flex;
@@ -87,3 +89,4 @@
     margin-bottom: 2em;
     width: 300px;
   }
+}

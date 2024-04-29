@@ -8,6 +8,7 @@ function Burgermenu({ isOpen, toggleMenu }) {
       section.scrollIntoView({ behavior: "smooth" });
     }
   };
+
   return (
     <div>
       <div
@@ -15,20 +16,36 @@ function Burgermenu({ isOpen, toggleMenu }) {
         role="presentation"
         onClick={toggleMenu}
       >
-        <div className="burger burger1" />
-        <div className="burger burger2" />
-        <div className="burger burger3" />
+        <div className="burger_icon">
+          <div className="burger burger1" />
+          <div className="burger burger2" />
+          <div className="burger burger3" />
+        </div>
         {isOpen && (
           <div className="menu">
-            <a href="#trending" onClick={() => scrollToSection("trends")}>
-              Tendances
-            </a>
-            <a href="#streaming" onClick={() => scrollToSection("stream")}>
-              Streaming
-            </a>
-            <a href="#category" onClick={() => scrollToSection("categ")}>
-              Catégories
-            </a>
+            <div className="title_menu">
+              <a
+                className="title"
+                href="#trending"
+                onClick={() => scrollToSection("trends")}
+              >
+                Tendances
+              </a>
+              <a
+                className="title"
+                href="#streaming"
+                onClick={() => scrollToSection("stream")}
+              >
+                Streaming
+              </a>
+              <a
+                className="title"
+                href="#category"
+                onClick={() => scrollToSection("categ")}
+              >
+                Catégories
+              </a>
+            </div>
           </div>
         )}
       </div>
