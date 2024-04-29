@@ -1,16 +1,4 @@
-.navbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding-top: 1%;
-  background-color: #eff0f6;
-  position: fixed;
-  width: 100%;
-  z-index: 99;
-  opacity: 0.8;
-  padding-top: 1%;
-  top: 0;
-}
+
 .anchor_filter_navbar {
   display: flex;
   flex-direction: column;
@@ -70,14 +58,54 @@ button {
 .button_search {
   width: 50%;
 }
+
 .search_name_result {
   padding-top: 10%;
+
+.navbar {
+  display: none;
+}
+.logo_burgermenu {
+  width: 150px;
+  position: absolute;
+  left: 35%;
+  right: 50%;
+}
+.navbar_top {
+  display: flex;
+  margin-top: 1em;
+  margin-bottom: 7em;
+}
+.search_menuburger {
+  position: absolute;
+  top: 13%;
+  left: 50%;
+  right: 50%;
+  display: flex;
+  flex-direction: column;
+
 }
 
+//      DESKTOP VERSION
 @media screen and (min-width: 990px) {
+
   .anchor_navbar ul {
     justify-content: space-around;
     margin-left: 5%;
+
+ .navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 1%;
+  background-color: #eff0f6;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  opacity: 0.8;
+  padding-top: 1%;
+  top: 0;
+}
   }
   .anchor_navbar ul a {
     font-size: 1.5em;
@@ -94,5 +122,14 @@ button {
     position: absolute;
     left: 50%;
     right: 30%;
+  }
+  .menu {
+    display: none;
+  }
+  .logo_burgermenu {
+    display: none;
+  }
+  .mobile_search_bar {
+    display: none;
   }
 }

@@ -101,11 +101,13 @@
   flex-direction: row;
   justify-content: space-between;
   align-content: center;
+
   position: absolute;
   bottom: -550%;
 }
 .search_date {
   padding-top: 3%;
+
 }
 
 @media screen and (max-width: 990px) {
@@ -119,6 +121,7 @@
   }
   .search_card {
     margin-bottom: 2em;
+
     width: 350px;
   }
   .search_date {
@@ -126,5 +129,8 @@
   }
   .search_name {
     font-size: medium;
+
+    width: 300px;
+
   }
 }

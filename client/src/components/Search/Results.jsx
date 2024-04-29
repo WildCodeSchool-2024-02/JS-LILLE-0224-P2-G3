@@ -20,25 +20,27 @@ function Results() {
   const getByName = () => {
     Api.getByName(state.query, page).then((resp) => {
       setGames(resp.data.results);
-        setAllGames(resp.data.results);
-      });
-    };
+      setAllGames(resp.data.results);
+    });
+  };
 
   useEffect(() => {
     getByName();
+
     
   // eslint-disable-next-line react-hooks/exhaustive-deps
+
   }, [state.query, page]);
 
   return (
     <div>
       <h2 className="search_name_result"> Résultats pour {state.query}</h2>
       <FilterCategoryPlatform
-          games={games}
-          setGames={setGames}
-          allGames={allGames}
-          setAllGames={setAllGames}
-        />
+        games={games}
+        setGames={setGames}
+        allGames={allGames}
+        setAllGames={setAllGames}
+      />
       <div className="search_grid_container">
         <div className="search_grid">
           {games &&
@@ -56,30 +58,30 @@ function Results() {
                   <div className="search_name">
                     {game.name}
                     <div className="platform">
-                    {game.platforms &&
-                      game.platforms.map((plat) => {
-                        if (
-                          plat.platform.name === "Wii" ||
-                          plat.platform.name === "Nintendo Switch" ||
-                          plat.platform.name === "Xbox One" ||
-                          plat.platform.name === "Xbox Series S/X" ||
-                          plat.platform.name === "PC" ||
-                          plat.platform.name === "PlayStation 3" ||
-                          plat.platform.name === "PlayStation 4" ||
-                          plat.platform.name === "PlayStation 5"
-                        ) {
-                          return (
-                            <div
-                              className="platform_name"
-                              key={plat.platform.name}
-                            >
-                              {" "}
-                              {plat.platform.name}
-                            </div>
-                          );
-                        }
-                        return null;
-                      })}
+                      {game.platforms &&
+                        game.platforms.map((plat) => {
+                          if (
+                            plat.platform.name === "Wii" ||
+                            plat.platform.name === "Nintendo Switch" ||
+                            plat.platform.name === "Xbox One" ||
+                            plat.platform.name === "Xbox Series S/X" ||
+                            plat.platform.name === "PC" ||
+                            plat.platform.name === "PlayStation 3" ||
+                            plat.platform.name === "PlayStation 4" ||
+                            plat.platform.name === "PlayStation 5"
+                          ) {
+                            return (
+                              <div
+                                className="platform_name"
+                                key={plat.platform.name}
+                              >
+                                {" "}
+                                {plat.platform.name}
+                              </div>
+                            );
+                          }
+                          return null;
+                        })}
                     </div>
                   </div>
                   <div className="search_date">
