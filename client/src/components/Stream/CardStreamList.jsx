@@ -85,7 +85,11 @@ function CardStreamList() {
           )}
           {showAllCards && (
             <div className="button_up_down">
-              <button type="button" onClick={() => setShowAllCards(false)}>
+              <button
+                className="button_arrow"
+                type="button"
+                onClick={() => setShowAllCards(false)}
+              >
                 <img
                   src="../public/button/arrow-up.png"
                   alt="logo"
