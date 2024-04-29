@@ -31,6 +31,7 @@ function Navbar() {
         <div className="anchor_filter_navbar">
           <div className="anchor_navbar">
             <ul>
+
               <li>
                 <Link to="./">
                   <button type="button">
@@ -80,11 +81,11 @@ function Navbar() {
                     alt="rechercher"
                   />
                 </button>
+
               </li>
             </ul>
+            <div className="search_navbar">{isSearchVisible && <Search />}</div>
           </div>
-
-          {isSearchVisible && <Search />}
         </div>
       </div>
     </div>

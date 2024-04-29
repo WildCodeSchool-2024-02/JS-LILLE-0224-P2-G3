@@ -17,7 +17,6 @@ function CardStream({ stream }) {
             <video
               className="video_streamer"
               src={stream.video}
-              width="250"
               loop
               autoPlay
             />
