@@ -26,11 +26,15 @@ function Results() {
 
   useEffect(() => {
     getByName();
+
+    
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+
   }, [state.query, page]);
 
   return (
     <div>
-      <h2> Résultats pour {state.query}</h2>
+      <h2 className="search_name_result"> Résultats pour {state.query}</h2>
       <FilterCategoryPlatform
         games={games}
         setGames={setGames}
@@ -87,16 +91,24 @@ function Results() {
                 </div>
               </div>
             ))}
-          <div className="pagination">
+        </div>
+          <div className="pagination_search">
             <button type="button" onClick={PrevioushandleClick}>
-              précédent
+            <img
+                  src="../public/button/arrow-down.png"
+                  alt="logo"
+                  className="arrow_left"
+                />{" "}
             </button>
             <p>{page}</p>
             <button type="button" onClick={NexthandleClick}>
-              suivant
+            <img
+                  src="../public/button/arrow-up.png"
+                  alt="logo"
+                  className="arrow_right"
+                />{" "}
             </button>
           </div>
-        </div>
       </div>
     </div>
   );
