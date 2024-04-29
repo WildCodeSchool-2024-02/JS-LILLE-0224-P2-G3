@@ -27,7 +27,7 @@ function CategoryCard() {
   return (
     <div>
       <div>
-        <h2>{state.CategoryName}</h2>
+        <h2 className="category_title">{state.CategoryName}</h2>
         <FilterCategoryPlatform
           games={games}
           setGames={setGames}
@@ -42,10 +42,6 @@ function CategoryCard() {
                   className="category_image"
                   alt=""
                   src={game.background_image}
-                  style={{ width: "500px" }}
-                  key={game.id}
-                  role="presentation"
-                  onClick={() => handleOpenGameWebsite(game.id)}
                 />
                 <div>
                   <p className="category_name">{game.name}</p>
