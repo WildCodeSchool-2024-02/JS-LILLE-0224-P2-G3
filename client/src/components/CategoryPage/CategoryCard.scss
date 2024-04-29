@@ -2,7 +2,10 @@
   margin-top: 2em;
   color: #e33335;
 }
-
+.toto {
+  display: flex;
+  background-color: #e33335;
+}
 .category_grid_container {
   display: flex;
   justify-content: center;
@@ -13,6 +16,7 @@
   grid-template-rows: repeat(10, 1fr);
   grid-column-gap: 5%;
   justify-content: center;
+  margin-bottom: 12%;
 }
 .category_container {
   display: flex;
@@ -34,7 +38,7 @@
   font-size: large;
 }
 .category_card {
-  background-color: #303230;
+  background-color: #ffabb3;
   border-radius: 2em;
   padding-bottom: 7%;
   margin-top: 3em;
@@ -44,6 +48,14 @@
   margin-top: 10px;
   display: flex;
   justify-content: flex-end;
+}
+.pagination_category {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  position: absolute;
+  bottom: -533%;
 }
 
 @media screen and (max-width: 990px) {

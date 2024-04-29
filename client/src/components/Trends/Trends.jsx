@@ -50,6 +50,7 @@ function Trends() {
       (trend) => trend.title !== focusCard.title
     );
     setOthersTrends(updatedTrendsArray);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [focusCard]);
 
   //    DISPOSITION MOBILE
@@ -63,7 +64,7 @@ function Trends() {
 
   return (
     <>
-      <h2 id="trending">TENDANCES</h2>
+      <h2 id="trending">Tendances</h2>
       <div className="all_cards">
         <div className="focus_card">
           <TrendingCard tendances={focusCard} />

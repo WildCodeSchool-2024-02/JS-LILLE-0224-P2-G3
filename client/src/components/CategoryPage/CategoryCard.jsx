@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { useGame } from "../../contexts/GameContext";
+import { usePage } from "../../contexts/PageContext";
 import Api from "../../services/Api";
 import FilterCategoryPlatform from "../Filter/FilterCategoryPlatform"
 import "./CategoryCard.scss";
@@ -9,20 +9,19 @@ function CategoryCard() {
   const [games, setGames] = useState([]);
   const [allGames, setAllGames] = useState([]);
   const { state } = useLocation();
-  const { openGameWebsite } = useGame();
-  const handleOpenGameWebsite = (gameId) => {
-    openGameWebsite(gameId);
-  };
+
+  const { page, PrevioushandleClick, NexthandleClick } = usePage();
 
   useEffect(() => {
     const getGamesByGenre = () => {
-      Api.getGamesByGenre(state.CategoryId).then((resp) => {
+      Api.getGamesByGenre(state.CategoryId, page).then((resp) => {
         setGames(resp.data.results);
         setAllGames(resp.data.results);
       });
     };
     getGamesByGenre();
-  }, [state]);
+  }, [state, page]);
+  
 
   return (
     <div>
@@ -75,6 +74,23 @@ function CategoryCard() {
                 </div>
               </div>
             ))}
+          </div>
+                    <div className="pagination_category">
+            <button type="button" onClick={PrevioushandleClick}>
+            <img
+                  src="../public/button/arrow-down.png"
+                  alt="logo"
+                  className="arrow_left"
+                />{" "}
+            </button>
+            <p>{page}</p>
+            <button type="button" onClick={NexthandleClick}>
+            <img
+                  src="../public/button/arrow-up.png"
+                  alt="logo"
+                  className="arrow_right"
+                />{" "}
+            </button>
           </div>
         </div>
       </div>

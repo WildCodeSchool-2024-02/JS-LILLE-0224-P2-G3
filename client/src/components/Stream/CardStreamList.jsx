@@ -60,7 +60,7 @@ function CardStreamList() {
     <div>
       <div id="streaming">
         <div>
-          <h2>STREAMING</h2>
+          <h2>Streaming</h2>
           <div className="streamer_list">
             {showAllCards
               ? streamerList.map((streamer) => (

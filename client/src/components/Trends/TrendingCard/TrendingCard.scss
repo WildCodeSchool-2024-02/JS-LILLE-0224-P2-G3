@@ -2,14 +2,14 @@ body {
   background-color: #eff0f6;
 }
 p {
-  color: rgb(57, 55, 55);
+  color: #282929;
 }
 h2 {
   font-size: 2em;
   margin-left: 1em;
   margin-top: 1em;
-  color: #f9fae8;
-  font-family: "Oswald", sans-serif;
+  color: #e33335;
+  font-family: "Lobster", sans-serif;
   margin-bottom: 0.7em;
 }
 
@@ -21,7 +21,7 @@ h2 {
   padding: 1em;
   margin: 1em;
   box-sizing: content-box;
-  color: white;
+  color: #fbfbfb;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -58,7 +58,8 @@ p {
 
 .trending_card_image {
   width: 100%;
-  border-radius: 2em;
+  border-top-left-radius: 2em;
+  border-top-right-radius: 2em;
   object-fit: cover;
 }
 
@@ -68,6 +69,7 @@ p {
 
 .trending_info {
   text-align: center;
+  padding: 5%;
 }
 
 //   DISPOSITION DES CARDS
@@ -116,7 +118,6 @@ p {
   .trending_card_container {
     // background-color: #303230;
     box-sizing: content-box;
-    color: #f9fae8;
     cursor: pointer;
     padding-bottom: 0px;
   }
@@ -139,7 +140,7 @@ p {
     margin-top: 1em;
     color: #e33335;
     // font-family: "Oswald", sans-serif;
-    font-family: "Barlow", sans-serif;
+    font-family: "Lobster", sans-serif;
   }
 
   .focus_card {
@@ -169,6 +170,8 @@ p {
     .trending_card_container {
       width: 20vw;
       height: 30vh;
+      display: flex;
+      align-items: center;
     }
   }
   .focus_card {
@@ -194,6 +197,11 @@ p {
       object-fit: cover;
     }
   }
+  .focus_card {
+    .trending_title {
+      margin-left: 5%;
+    }
+  }
 
   .buttons {
     display: none;
@@ -205,6 +213,7 @@ p {
   .trending_title {
     text-align: left;
   }
+
   .otherCards {
     .trending_title {
       text-align: center;

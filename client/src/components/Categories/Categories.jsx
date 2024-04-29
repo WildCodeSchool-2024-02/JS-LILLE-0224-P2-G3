@@ -37,7 +37,7 @@ function Categories() {
 
   return (
     <div>
-      <h2 id="category"> CATÉGORIES</h2>
+      <h2 id="category"> Catégories</h2>
       <div className="grid_categories_card">
         {!showAllCategs && (
           <>

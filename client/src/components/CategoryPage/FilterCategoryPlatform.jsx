@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
+import "./CategoryCard.scss";
 
 function FilterCategoryPlatform({ setGames, allGames }) {
   const [selectedPlatform, setSelectedPlatform] = useState("");
@@ -21,7 +22,7 @@ function FilterCategoryPlatform({ setGames, allGames }) {
   };
 
   return (
-    <>
+    <div className="toto">
       <label htmlFor="platform-select" style={{ color: "white" }}>
         Choisir une plateforme :
       </label>
@@ -42,7 +43,7 @@ function FilterCategoryPlatform({ setGames, allGames }) {
         <option value="PlayStation 4">PlayStation 4</option>
         <option value="PlayStation 5">PlayStation 5</option>
       </select>
-    </>
+    </div>
   );
 }
 

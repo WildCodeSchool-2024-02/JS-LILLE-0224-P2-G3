@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
+import "./FilterSearchPlatform.scss"
 
 function FilterSearchPlatform({ setResultsSearchByName, allGamesResults }) {
   //      Declaration of state for the selected category and the filtered elements
