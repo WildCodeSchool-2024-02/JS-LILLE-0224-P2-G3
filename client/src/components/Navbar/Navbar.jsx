@@ -24,6 +24,26 @@ function Navbar() {
   };
   return (
     <div className="navbar_top">
+      <div className="hamburger" role="presentation" onClick={toggleHamburger}>
+        <Burgermenu isOpen={hamburgerOpen} toggleMenu={toggleHamburger} />
+      </div>
+      <img
+        className="logo_burgermenu"
+        src="/public/logo/logo-final.png"
+        alt=""
+      />
+      <div className="search_menuburger">
+        {" "}
+        <button type="button" onClick={toggleSearch}>
+          <img
+            className="search_logo"
+            src="/public/button/rechercher.png"
+            alt="rechercher"
+          />
+        </button>
+        <div className="mobile_search_bar">{isSearchVisible && <Search />}</div>
+      </div>
+
       <div className="navbar">
         <div className="logo_titre_navbar">
           <div className="imglogo_navbar">
@@ -38,27 +58,12 @@ function Navbar() {
           <div className="anchor_navbar">
             <ul>
               <li>
-                <a href="#trending" onClick={() => scrollToSection("trends")}>
-                  Tendances
-                </a>
-              </li>
-              <li>
-                <a href="#streaming" onClick={() => scrollToSection("stream")}>
-                  Streaming
-                </a>
-              </li>
-              <li>
-                <a href="#category" onClick={() => scrollToSection("categ")}>
-                  Catégories
-                </a>
                 <Link to="./" type="button">
-                 
-                    <img
-                      className="home_logo"
-                      src="/public/button/home.png"
-                      alt="home"
-                    />
-                 
+                  <img
+                    className="home_logo"
+                    src="/public/button/home.png"
+                    alt="home"
+                  />
                 </Link>
               </li>
               <li>
@@ -89,20 +94,12 @@ function Navbar() {
                 <button type="button" onClick={toggleSearch}>
                   <img
                     className="search_logo"
-
                     src="/public/button/rechercher.png"
                     alt="rechercher"
                   />
                 </button>
               </li>
             </ul>
-            <div
-              className="hamburger"
-              role="presentation"
-              onClick={toggleHamburger}
-            >
-              <Burgermenu isOpen={hamburgerOpen} toggleMenu={toggleHamburger} />
-            </div>
             <div className="search_navbar">{isSearchVisible && <Search />}</div>
           </div>
         </div>
