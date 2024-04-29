@@ -31,7 +31,6 @@ function Navbar() {
         <div className="anchor_filter_navbar">
           <div className="anchor_navbar">
             <ul>
-
               <li>
                 <Link to="./">
                   <button type="button">
@@ -44,33 +43,27 @@ function Navbar() {
                 </Link>
               </li>
               <li>
-                <Link to="./">
-                  <a
-                    href="#trending"
-                    onClick={() => scrollToSection("trending")}
-                  >
-                    Tendances
-                  </a>
+                <Link
+                  to="./#trending"
+                  onClick={() => scrollToSection("trending")}
+                >
+                  Tendances
                 </Link>
               </li>
               <li>
-                <Link to="./">
-                  <a
-                    href="#streaming"
-                    onClick={() => scrollToSection("streaming")}
-                  >
-                    Streaming
-                  </a>
+                <Link
+                  to="./#streaming"
+                  onClick={() => scrollToSection("streaming")}
+                >
+                  Streaming
                 </Link>
               </li>
               <li>
-                <Link to="./">
-                  <a
-                    href="#category"
-                    onClick={() => scrollToSection("category")}
-                  >
-                    Catégories
-                  </a>
+                <Link
+                  to="./#category"
+                  onClick={() => scrollToSection("category")}
+                >
+                  Catégories
                 </Link>
               </li>
               <li>
@@ -81,7 +74,6 @@ function Navbar() {
                     alt="rechercher"
                   />
                 </button>
-
               </li>
             </ul>
             <div className="search_navbar">{isSearchVisible && <Search />}</div>
