@@ -1,6 +1,7 @@
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { usePage } from "../../contexts/PageContext";
+import { useGame } from "../../contexts/GameContext";
 import Api from "../../services/Api";
 
 import "./Search.scss";
@@ -10,10 +11,12 @@ function Results() {
   const [resultsSearchByName, setResultsSearchByName] = useState([]);
   const [allGamesResults, setAllGamesResults] = useState();
   const { state } = useLocation();
+  const { openGameWebsite } = useGame();
+  const handleOpenGameWebsite = (gameId) => {
+    openGameWebsite(gameId);
+  };
 
   const { page, PrevioushandleClick, NexthandleClick } = usePage();
-
-  
 
   const getByName = () => {
     Api.getByName(state.query, page).then((resp) => {
@@ -25,7 +28,6 @@ function Results() {
   useEffect(() => {
     getByName();
   }, [state.query, page]);
-
 
   return (
     <div>
@@ -44,6 +46,9 @@ function Results() {
                   className="search_image"
                   src={item.background_image}
                   alt=""
+                  key={item.id}
+                  role="presentation"
+                  onClick={() => handleOpenGameWebsite(item.id)}
                 />
                 <div className="search_info">
                   <div className="search_name">
@@ -82,7 +87,7 @@ function Results() {
                 </div>
               </div>
             ))}
-            <div className="pagination">
+          <div className="pagination">
             <button type="button" onClick={PrevioushandleClick}>
               précédent
             </button>
@@ -98,4 +103,3 @@ function Results() {
 }
 
 export default Results;
-
