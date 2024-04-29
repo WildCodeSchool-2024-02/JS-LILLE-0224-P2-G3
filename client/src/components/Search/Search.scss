@@ -74,4 +74,16 @@
   display: flex;
   justify-content: space-between;
   align-content: center;
-}
+@media screen and (max-width: 990px) {
+  .search_grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .search_image {
+    width: 300px;
+    height: 200px;
+  }
+  .search_card {
+    margin-bottom: 2em;
+    width: 300px;
+  }

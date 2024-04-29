@@ -17,7 +17,6 @@ function CardStream({ stream }) {
             <video
               className="video_streamer"
               src={stream.video}
-              width="250"
               loop
               autoPlay
             />
@@ -28,6 +27,13 @@ function CardStream({ stream }) {
               alt={stream.name}
             />
           )}
+        </div>
+        <div className="image_mobile">
+          <img
+            className="image_only_mobile"
+            src={stream.image}
+            alt={stream.name}
+          />
         </div>
         <div className="card_stream_info">
           <h4>{stream.name}</h4>

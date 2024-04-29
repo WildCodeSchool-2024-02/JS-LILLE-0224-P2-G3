@@ -46,8 +46,17 @@ h4 {
   display: flex;
 }
 
-.player-wrapper {
-  width: 80%;
+.video_streamer {
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  width: 100%;
+}
+.image_mobile {
+  display: none;
+}
+//    Arrows
+.button_arrow {
+  display: none;
 }
 
 //    RESPONSIVE : MOBILE VERSION
@@ -67,10 +76,31 @@ h4 {
   }
 
   //    BUTTON
-  .button {
+  .button_up_down {
     display: flex;
     justify-content: center;
-    padding: 0.5em;
-    border-radius: 1em;
+    background-color: #eff0f6;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  .arrow_logo {
+    width: 9%;
+  }
+
+  //    VIDEO HIDDEN
+  .image_video {
+    display: none;
+  }
+  .image_mobile {
+    display: block;
+  }
+  .image_only_mobile {
+    width: 100%;
+    border-top-left-radius: 1.5em;
+    border-top-right-radius: 1.5em;
   }
 }

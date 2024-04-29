@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Search from "../Search/Search";
 import Burgermenu from "./Burgermenu";
 import "./Navbar.scss";
@@ -50,12 +51,46 @@ function Navbar() {
                 <a href="#category" onClick={() => scrollToSection("categ")}>
                   Catégories
                 </a>
+                <Link to="./" type="button">
+                 
+                    <img
+                      className="home_logo"
+                      src="/public/button/home.png"
+                      alt="home"
+                    />
+                 
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="./#trending"
+                  onClick={() => scrollToSection("trending")}
+                >
+                  Tendances
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="./#streaming"
+                  onClick={() => scrollToSection("streaming")}
+                >
+                  Streaming
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="./#category"
+                  onClick={() => scrollToSection("category")}
+                >
+                  Catégories
+                </Link>
               </li>
               <li>
                 <button type="button" onClick={toggleSearch}>
                   <img
                     className="search_logo"
-                    src="../../../public/button/rechercher.png"
+
+                    src="/public/button/rechercher.png"
                     alt="rechercher"
                   />
                 </button>
@@ -68,9 +103,8 @@ function Navbar() {
             >
               <Burgermenu isOpen={hamburgerOpen} toggleMenu={toggleHamburger} />
             </div>
+            <div className="search_navbar">{isSearchVisible && <Search />}</div>
           </div>
-
-          {isSearchVisible && <Search />}
         </div>
       </div>
     </div>

@@ -57,42 +57,50 @@ function CardStreamList() {
   });
 
   return (
-    <>
-      <div  id="streaming">
-        {!showAllCards && (
-          <div>
-            <div>
-              <h2>STREAM</h2>
-            </div>
-            <div className="streamer_list">
-              {streamerList.slice(0, 2).map((streamer) => (
-                <CardStream stream={streamer} key={streamer.name} />
-              ))}
-            </div>
-            <div className="button">
+    <div>
+      <div id="streaming">
+        <div>
+          <h2>STREAMING</h2>
+          <div className="streamer_list">
+            {showAllCards
+              ? streamerList.map((streamer) => (
+                  <CardStream stream={streamer} key={streamer.name} />
+                ))
+              : streamerList
+                  .slice(0, 2)
+                  .map((streamer) => (
+                    <CardStream stream={streamer} key={streamer.name} />
+                  ))}
+          </div>
+          {!showAllCards && (
+            <div className="button_up_down">
               <button type="button" onClick={() => setShowAllCards(true)}>
-                Voir plus
+                <img
+                  src="../public/button/arrow-down.png"
+                  alt="logo"
+                  className="arrow_logo"
+                />
               </button>
             </div>
-          </div>
-        )}
-      </div>
-
-      <div>
-        {showAllCards && (
-          <div>
-            <div>
-              <h2>STREAM</h2>
+          )}
+          {showAllCards && (
+            <div className="button_up_down">
+              <button
+                className="button_arrow"
+                type="button"
+                onClick={() => setShowAllCards(false)}
+              >
+                <img
+                  src="../public/button/arrow-up.png"
+                  alt="logo"
+                  className="arrow_logo"
+                />{" "}
+              </button>
             </div>
-            <div className="streamer_list">
-              {streamerList.map((streamer) => (
-                <CardStream stream={streamer} key={streamer.name} />
-              ))}
-            </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
-    </>
+    </div>
   );
 }
 
