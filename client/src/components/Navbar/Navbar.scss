@@ -73,15 +73,21 @@ button {
 }
 .search_menuburger {
   position: absolute;
-  top: 13%;
+  top: 9%;
   left: 50%;
   right: 50%;
   display: flex;
   flex-direction: column;
 }
+#search_logo_burger {
+  margin-bottom: 0.5em;
+}
 
 //      DESKTOP VERSION
 @media screen and (min-width: 990px) {
+  #search_logo_burger {
+    display: none;
+  }
   .navbar {
     display: flex;
     flex-direction: row;
