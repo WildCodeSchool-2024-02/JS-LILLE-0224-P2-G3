@@ -36,7 +36,7 @@ function Navbar() {
                   <button type="button">
                     <img
                       className="home_logo"
-                      src="../../../public/button/home.png"
+                      src="/public/button/home.png"
                       alt="home"
                     />
                   </button>
@@ -76,7 +76,7 @@ function Navbar() {
                 <button type="button" onClick={toggleSearch}>
                   <img
                     className="search_logo"
-                    src="../../../public/button/rechercher.png"
+                    src="/public/button/rechercher.png"
                     alt="rechercher"
                   />
                 </button>
