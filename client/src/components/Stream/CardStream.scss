@@ -51,7 +51,9 @@ h4 {
   border-top-right-radius: 1em;
   width: 100%;
 }
-
+.image_mobile {
+  display: none;
+}
 //    Arrows
 .button_up_down {
   display: none;
@@ -87,5 +89,18 @@ h4 {
   }
   .arrow_logo {
     width: 9%;
+  }
+
+  //    VIDEO HIDDEN
+  .image_video {
+    display: none;
+  }
+  .image_mobile {
+    display: block;
+  }
+  .image_only_mobile {
+    width: 100%;
+    border-top-left-radius: 1.5em;
+    border-top-right-radius: 1.5em;
   }
 }
