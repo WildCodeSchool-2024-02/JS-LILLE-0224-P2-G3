@@ -1,13 +1,19 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Search from "../Search/Search";
+import Burgermenu from "./Burgermenu";
 import "./Navbar.scss";
 
 function Navbar() {
   const [isSearchVisible, setSearchVisible] = useState(false);
+  const [hamburgerOpen, setHamburgerOpen] = useState(false);
 
   const toggleSearch = () => {
     setSearchVisible(!isSearchVisible);
+  };
+
+  const toggleHamburger = () => {
+    setHamburgerOpen(!hamburgerOpen);
   };
 
   const scrollToSection = (id) => {
@@ -32,6 +38,19 @@ function Navbar() {
           <div className="anchor_navbar">
             <ul>
               <li>
+                <a href="#trending" onClick={() => scrollToSection("trends")}>
+                  Tendances
+                </a>
+              </li>
+              <li>
+                <a href="#streaming" onClick={() => scrollToSection("stream")}>
+                  Streaming
+                </a>
+              </li>
+              <li>
+                <a href="#category" onClick={() => scrollToSection("categ")}>
+                  Catégories
+                </a>
                 <Link to="./" type="button">
                  
                     <img
@@ -70,12 +89,20 @@ function Navbar() {
                 <button type="button" onClick={toggleSearch}>
                   <img
                     className="search_logo"
+
                     src="/public/button/rechercher.png"
                     alt="rechercher"
                   />
                 </button>
               </li>
             </ul>
+            <div
+              className="hamburger"
+              role="presentation"
+              onClick={toggleHamburger}
+            >
+              <Burgermenu isOpen={hamburgerOpen} toggleMenu={toggleHamburger} />
+            </div>
             <div className="search_navbar">{isSearchVisible && <Search />}</div>
           </div>
         </div>
