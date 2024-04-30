@@ -36,9 +36,10 @@ function Navbar() {
         {" "}
         <button type="button" onClick={toggleSearch}>
           <img
+            id="search_logo_burger"
             className="search_logo"
             src="/public/button/rechercher.png"
-            alt="rechercher"
+            alt="recherche"
           />
         </button>
         <div className="mobile_search_bar">{isSearchVisible && <Search />}</div>

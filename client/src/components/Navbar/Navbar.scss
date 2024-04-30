@@ -78,21 +78,26 @@ button {
 }
 .search_menuburger {
   position: absolute;
-  top: 13%;
+  top: 6%;
   left: 50%;
   right: 50%;
   display: flex;
   flex-direction: column;
 
 }
+#search_logo_burger {
+  margin-bottom: 0.5em;
+}
 
 //      DESKTOP VERSION
 @media screen and (min-width: 990px) {
 
+  #search_logo_burger {
+    display: none;
+  }
   .anchor_navbar ul {
     justify-content: space-around;
     margin-left: 5%;
-
  .navbar {
   display: flex;
   flex-direction: row;
@@ -106,6 +111,7 @@ button {
   padding-top: 1%;
   top: 0;
 }
+
   }
   .anchor_navbar ul a {
     font-size: 1.5em;
