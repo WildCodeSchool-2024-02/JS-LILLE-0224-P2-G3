@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import { PageProvider } from "./contexts/PageContext";
 import { GameProvider } from "./contexts/GameContext";
+import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import "./App.css";
 
@@ -12,6 +13,7 @@ function App() {
         <main>
           <Outlet />
         </main>
+        <Footer />
       </PageProvider>
     </GameProvider>
   );

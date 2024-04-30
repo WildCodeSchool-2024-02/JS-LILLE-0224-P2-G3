@@ -1,3 +1,4 @@
+
 .anchor_filter_navbar {
   display: flex;
   flex-direction: column;
@@ -11,8 +12,8 @@
   flex-direction: row;
   margin-bottom: 0.5em;
   color: #e33335;
-  font-family: "Barlow", Courier, monospace;
-  font-weight: 600;
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
   justify-content: center;
 }
 
@@ -40,11 +41,11 @@
 }
 
 .search_logo {
-  width: 20px;
+  width: 25px;
 }
 
 .home_logo {
-  width: 25px;
+  width: 32px;
 }
 
 button {
@@ -57,6 +58,10 @@ button {
 .button_search {
   width: 50%;
 }
+
+.search_name_result {
+  padding-top: 10%;
+
 .navbar {
   display: none;
 }
@@ -78,6 +83,7 @@ button {
   right: 50%;
   display: flex;
   flex-direction: column;
+
 }
 #search_logo_burger {
   margin-bottom: 0.5em;
@@ -85,17 +91,27 @@ button {
 
 //      DESKTOP VERSION
 @media screen and (min-width: 990px) {
+
   #search_logo_burger {
     display: none;
   }
-  .navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-top: 1%;
-    background-color: #eff0f6;
-    position: fixed;
-    width: 100%;
+  .anchor_navbar ul {
+    justify-content: space-around;
+    margin-left: 5%;
+ .navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 1%;
+  background-color: #eff0f6;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  opacity: 0.8;
+  padding-top: 1%;
+  top: 0;
+}
+
   }
   .anchor_navbar ul a {
     font-size: 1.5em;
