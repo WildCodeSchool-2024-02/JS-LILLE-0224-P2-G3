@@ -36,6 +36,7 @@
   display: flex;
   border-top-left-radius: 2em;
   border-top-right-radius: 2em;
+  cursor: pointer;
 }
 .search_info {
   display: flex;
@@ -107,7 +108,6 @@
 }
 .search_date {
   padding-top: 3%;
-
 }
 
 @media screen and (max-width: 990px) {
@@ -129,8 +129,15 @@
   }
   .search_name {
     font-size: medium;
-
     width: 300px;
-
+  }
+  .search_name_result {
+    margin-top: 22%;
+  }
+  .searchnavbar {
+    position: absolute;
+    border: none;
+    right: -19%;
+    top: 256%;
   }
 }

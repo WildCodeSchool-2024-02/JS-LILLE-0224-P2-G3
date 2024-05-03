@@ -42,9 +42,10 @@ function CategoryCard() {
                   alt=""
                   src={game.background_image}
                 />
-                <div>
+                <div className="search_info">
+                  <div className="name_platform">
                   <p className="category_name">{game.name}</p>
-                  <p className="rating">{game.rating} ⭐️</p>
+                  
                   <div className="platform">
                     {game.platforms &&
                       game.platforms.map((plat) => {
@@ -71,6 +72,8 @@ function CategoryCard() {
                         return null;
                       })}
                   </div>
+                  </div>
+                  <p className="rating">{game.rating} ★</p>
                 </div>
               </div>
             ))}

@@ -98,53 +98,12 @@ function Footer() {
           />
           <p className="mention_rawg">2024 © RAWG, Behind The Games</p>
         </div>
-        <div className="all_media">
-          <a
-            rel="noreferrer"
-            target="_blank"
-            href="https://twitter.com/"
-            aria-label="x"
-          >
-            <img
-              className="media_logo"
-              id="x_logo"
-              src="/public/footer/X_logo.png"
-              alt=""
-            />
-          </a>
-          <a
-            rel="noreferrer"
-            target="_blank"
-            href="https://www.instagram.com/"
-            aria-label="insta"
-          >
-            <img
-              className="media_logo"
-              id="insta"
-              src="/public/footer/Instagram_logo.png"
-              alt=""
-            />
-          </a>
-          <a
-            rel="noreferrer"
-            target="_blank"
-            href="https://www.facebook.com/"
-            aria-label="facebook"
-          >
-            <img
-              className="media_logo"
-              id="facebook_logo"
-              src="/public/footer/Facebook_logo.png"
-              alt=""
-            />
-          </a>
-        </div>
+        
         <div className="creator_footer">
           <ul>
-            <li>Arnauld Montandon</li>
-            <li>Audrey Baudry</li>
-            <li>Elias Ben Brahim</li>
-            <li>Morgan Pouilly</li>
+            <li>Arnauld Montandon, Audrey Baudry</li>
+            <li>Elias Ben Brahim, Morgan Pouilly</li>
+            
           </ul>
         </div>
       </div>

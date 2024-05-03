@@ -75,7 +75,7 @@ p {
 //   DISPOSITION DES CARDS
 .all_cards {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 .trending_card_container {
   // width: 90%;
@@ -88,22 +88,19 @@ p {
 
 .buttons {
   display: flex;
-  align-items: center;
-  font-weight: 800;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 4%;
+}
+.arrow_droite {
+  width: 45px;
+  transform: rotate(270deg);
+  margin-right: 10%;
 }
 
-.button_next {
-  border-radius: 1.5em;
-  font-size: 1em;
-  height: 9%;
-  width: 3em;
-}
-
-.button_previous {
-  border-radius: 1.5em;
-  font-size: 1em;
-  height: 9%;
-  width: 3em;
+.arrow_gauche {
+  width: 45px;
+  transform: rotate(90deg);
 }
 
 //    HIDDEN CARD (MOBILE VERSION)
@@ -131,6 +128,11 @@ p {
     margin-left: 2%;
     margin-right: 2%;
     flex-direction: column;
+  }
+  .all_cards {
+    .trending_card_image {
+      border-radius: 2em;
+    }
   }
   h2 {
     font-size: xxx-large;
@@ -188,6 +190,7 @@ p {
       width: 600px;
       height: 400px;
       object-fit: cover;
+      border-radius: 2em;
     }
   }
   .otherCards {

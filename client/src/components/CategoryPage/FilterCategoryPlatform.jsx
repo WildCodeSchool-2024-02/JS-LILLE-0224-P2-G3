@@ -38,7 +38,7 @@ function FilterCategoryPlatform({ setGames, allGames }) {
         <option value="Nintendo Switch">Nintendo Switch</option>
         <option value="Wii">Wii</option>
         <option value="Xbox One">Xbox One</option>
-        <option value="Xbox serie S/X">Xbox serie S/X</option>
+        <option value="Xbox Series S/X">Xbox Series S/X</option>
         <option value="PlayStation 3">PlayStation 3</option>
         <option value="PlayStation 4">PlayStation 4</option>
         <option value="PlayStation 5">PlayStation 5</option>
