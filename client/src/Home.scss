@@ -8,7 +8,7 @@
 .image_back_container {
   display: flex;
   justify-content: center;
-  padding: 5%;
+  margin-top: 5%;
   height: 600px;
   border-radius: 2em;
 }
@@ -20,5 +20,9 @@
   .image {
     width: 98%;
     margin-top: 9%;
+    padding: 5%;
+  }
+  .image_back_container {
+    margin-top: 20%;
   }
 }

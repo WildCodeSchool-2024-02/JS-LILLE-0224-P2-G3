@@ -105,5 +105,13 @@ h4 {
   }
   .button_arrow {
     display: flex;
+    justify-content: center;
+    background-color: #eff0f6;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
   }
 }

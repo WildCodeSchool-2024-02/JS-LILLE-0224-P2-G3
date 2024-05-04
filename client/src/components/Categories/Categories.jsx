@@ -10,9 +10,18 @@ function Categories() {
 
   const navigate = useNavigate();
 
-  window.addEventListener('resize', () => {
-    setShowAllCategs(window.innerWidth > 650);
-  });
+  useEffect(() => {
+    const handleResize = () => {
+      setShowAllCategs(window.innerWidth > 650);
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const getCategories = () => {
     Api.getCategories().then((resp) => { 
@@ -22,7 +31,6 @@ function Categories() {
 
   useEffect(() => {
     getCategories();
-    setShowAllCategs(window.innerWidth > 650);
   }, []);
 
   const handleShowAllCategs = () => {
@@ -42,7 +50,16 @@ function Categories() {
         {!showAllCategs && (
           <>
             {categories.slice(0, 4).map((item) => (
-              <div className="categories_card" key={`card-${item.name}`}>
+              // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
+              <div
+                className="categories_card"
+                key={`card-${item.name}`}
+                onClick={() => {
+                  navigate("/decouvrir/categorie", {
+                    state: { CategoryId: item.id, CategoryName: item.name },
+                  });
+                }}
+              >
                 <img
                   className="image_categories"
                   src={item.image_background}
@@ -52,18 +69,17 @@ function Categories() {
               </div>
             ))}
           
-              <button
-                className="button_up_down"
-                type="button"
-                onClick={handleShowAllCategs}
-              >
-                <img
-                  src="../public/button/arrow-down.png"
-                  alt="Logo"
-                  className="arrow_logo"
-                />
-              </button>
-            
+            <button
+              className="button_up_down"
+              type="button"
+              onClick={handleShowAllCategs}
+            >
+              <img
+                src="../public/button/arrow-down.png"
+                alt="Logo"
+                className="arrow_logo"
+              />
+            </button>
           </>
         )}
         {showAllCategs &&

@@ -2,26 +2,23 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   background-color: #ffabb3;
+  width: 100%;
 }
-
 .mention_legal {
   display: flex;
   flex-direction: row;
 }
-
 .all_store {
   margin-top: 1em;
   display: flex;
   flex-direction: column;
   margin-bottom: 1em;
 }
-
 #first_store {
   margin-left: 2em;
 }
-
 #second_store {
   margin-left: 0.5em;
   margin-right: 2em;
@@ -29,15 +26,12 @@
 .store_logo {
   width: 20px;
 }
-
 .imglogo_footer {
   width: 100px;
 }
-
 .logo_footer {
   text-align: center;
 }
-
 .creator_footer {
   margin-left: 2em;
   text-align: left;
@@ -45,14 +39,12 @@
 .all_media img {
   margin-bottom: 0.5em;
 }
-
 .creator_footer li {
   list-style-type: none;
   font-size: 0.7em;
   color: white;
   margin-right: 2em;
 }
-
 .creator_footer li:hover {
   color: red;
 }
@@ -97,5 +89,13 @@
   }
   .media_logo {
     width: 20px;
+  }
+  .footer_all {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #ffabb3;
+    width: 113%;
   }
 }
