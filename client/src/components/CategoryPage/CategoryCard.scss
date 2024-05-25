@@ -14,7 +14,6 @@
   grid-template-rows: repeat(10, 1fr);
   grid-column-gap: 5%;
   justify-content: center;
-  margin-bottom: 12%;
 }
 .category_container {
   display: flex;
@@ -41,6 +40,7 @@
   border-radius: 2em;
   padding-bottom: 7%;
   margin-top: 3em;
+  width: 600px;
 }
 
 .rating {
@@ -53,8 +53,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-content: center;
-  position: absolute;
-  bottom: -533%;
+  margin: 1.5em;
 }
 .name_platform {
   display: flex;
@@ -78,8 +77,5 @@
   }
   .category_title {
     margin-top: 32%;
-  }
-  .pagination_category {
-    bottom: -441%;
   }
 }

@@ -11,6 +11,12 @@ function Results() {
   const [allGames, setAllGames] = useState([]);
   const { state } = useLocation();
   const { openGameWebsite } = useGame();
+  const { setPage } = usePage();
+
+  useEffect(() => {
+    setPage(1);
+  }, [state.query, setPage]);
+
   const handleOpenGameWebsite = (gameId) => {
     openGameWebsite(gameId);
   };
@@ -21,15 +27,13 @@ function Results() {
     Api.getByName(state.query, page).then((resp) => {
       setGames(resp.data.results);
       setAllGames(resp.data.results);
+      window.scrollTo(0, 0);
     });
   };
 
   useEffect(() => {
     getByName();
-
-    
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state.query, page]);
 
   return (
@@ -92,23 +96,23 @@ function Results() {
               </div>
             ))}
         </div>
-          <div className="pagination_search">
-            <button type="button" onClick={PrevioushandleClick}>
-            <img
-                  src="../public/button/arrow-down.png"
-                  alt="logo"
-                  className="arrow_left"
-                />{" "}
-            </button>
-            <p>{page}</p>
-            <button type="button" onClick={NexthandleClick}>
-            <img
-                  src="../public/button/arrow-up.png"
-                  alt="logo"
-                  className="arrow_right"
-                />{" "}
-            </button>
-          </div>
+      </div>
+      <div className="pagination_search">
+        <button type="button" onClick={PrevioushandleClick}>
+          <img
+            src="../public/button/arrow-down.png"
+            alt="logo"
+            className="arrow_left"
+          />{" "}
+        </button>
+        <p>{page}</p>
+        <button type="button" onClick={NexthandleClick}>
+          <img
+            src="../public/button/arrow-up.png"
+            alt="logo"
+            className="arrow_right"
+          />{" "}
+        </button>
       </div>
     </div>
   );
