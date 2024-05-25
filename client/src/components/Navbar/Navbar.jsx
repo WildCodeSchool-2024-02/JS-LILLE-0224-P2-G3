@@ -1,42 +1,50 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Search from "../Search/Search";
 import "./Navbar.scss";
 
 function Navbar() {
   const [isSearchVisible, setSearchVisible] = useState(false);
-  // const [hamburgerOpen, setHamburgerOpen] = useState(false);
+  const [navbarHeight, setNavbarHeight] = useState(0);
+
+  const navbarRef = useRef(null);
 
   const toggleSearch = () => {
     setSearchVisible(!isSearchVisible);
   };
 
- 
+  useEffect(() => {
+    setNavbarHeight(navbarRef.current.offsetHeight);
+  }, []);
 
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+      window.scrollTo({
+        top: section.offsetTop - navbarHeight - 15,
+        behavior: "smooth",
+      });
     }
   };
+
   return (
     <div className="navbar_top">
       <div className="navbar_mobile">
-      <Link to="./" type="button">
-                  <img
-                    className="home_logo_mobile"
-                    src="/public/button/home.png"
-                    alt="home"
-                  />
-                </Link>
-       
-          <Link to="./" type="button">
+        <Link to="./" type="button">
+          <img
+            className="home_logo_mobile"
+            src="/public/button/home.png"
+            alt="home"
+          />
+        </Link>
+
+        <Link to="./" type="button">
           <img
             className="logo_burgermenu"
             src="/public/logo/logo-final.png"
             alt=""
           />
-          </Link>
+        </Link>
 
         <div className="search_menuburger">
           <button type="button" onClick={toggleSearch}>
@@ -45,12 +53,14 @@ function Navbar() {
               src="/public/button/rechercher.png"
               alt="rechercher"
             />
-            <div className="mobile_search_bar"><Search /></div>
+            <div className="mobile_search_bar">
+              <Search />
+            </div>
           </button>
         </div>
       </div>
 
-      <div className="navbar">
+      <div className="navbar" ref={navbarRef}>
         <div className="logo_titre_navbar">
           <div className="imglogo_navbar">
             <img
